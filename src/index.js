@@ -5,7 +5,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 
-const users = () => {}
+const users = null
 const reducer = combineReducers({
     users
 })
