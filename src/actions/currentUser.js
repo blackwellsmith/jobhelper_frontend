@@ -10,6 +10,7 @@ export const login = credentials => {
     console.log("wtf", credentials)
     return dispatch => {
         return fetch("http://localhost:3000/login", {
+            credentials: "include",
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -31,6 +32,7 @@ export const login = credentials => {
 export const getCurrentUser = () => {
     return dispatch => {
         return fetch("http://localhost:3000/get_current_user", {
+            credentials: "include",
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
