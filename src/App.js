@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
+import Login from "./components/Loginform.js"
 
 class App extends React.Component {
 
-  render(){
-  return (
-    "get heard"
-  );
-  
+  render() {
+    return (
+      
+      <Login/>
+    );
   }
- 
 }
 
 export default App;
