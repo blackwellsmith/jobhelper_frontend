@@ -7,13 +7,14 @@ export const setCurrent = user => {
 }
 
 export const login = credentials => {
+    console.log("wtf", credentials)
     return dispatch => {
         return fetch("http://localhost3000/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify( {email: "email", password: "password"} )
+            body: JSON.stringify()
         })
     }
 }
