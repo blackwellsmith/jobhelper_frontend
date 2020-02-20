@@ -15,15 +15,21 @@ const Login = ({ loginFormData, updateLoginForm, login }) => {
         updateLoginForm(updatedLogin)
     }
 
-    const handleOnSubmit = event => {
-        event.preventDefault()
-        login(loginFormData)
+    const handleOnSubmit = () => {
+       
+        login(loginFormData) 
     }
     return (
         <form onSubmit={handleOnSubmit}>
-            <input placeholder="email" value={loginFormData.email} name="email" type='text' onChange={handleOnChange} />
-            <input placeholder="password" value={loginFormData.password} name="password" type='text' onChange={handleOnChange} />
-            <input type="submit" value="Log in" />
+            <div class="form-group">
+                <div class="col-xs-4">
+                    <input placeholder="email" class="form-control input-lg" value={loginFormData.email} name="email" type='text' onChange={handleOnChange} />
+                </div>
+                <div class="col-xs-4">
+                    <input placeholder="password" class="form-control input-lg" value={loginFormData.password} name="password" type='text' onChange={handleOnChange} />
+                </div>
+                <button type="submit" class="btn btn-primary">Log in</button>
+            </div>   
         </form>
     )
 }
