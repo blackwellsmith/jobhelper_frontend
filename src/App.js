@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { getCurrentUser } from './actions/currentUser.js'
 import Navbar from './components/Navbar.js'
 import MainContainer from './components/MainContainer.js'
+import Signup from './components/Signup.js'
 
 class App extends React.Component {
 
@@ -14,8 +15,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
-        <MainContainer />
+        <Signup />
+        
+          
       </div> 
     );
   }
