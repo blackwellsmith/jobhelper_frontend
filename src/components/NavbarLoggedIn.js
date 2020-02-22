@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 
 
-const Navbar = () => {
+const NavbarLoggedIn = () => {
     
     return (
         <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>
@@ -21,6 +21,4 @@ const mapStateToProps = ({ currentUser }) => {
   }
 
 
-export default connect(mapStateToProps)(Navbar)
-
-//<NavLink style={{ marginRight: '10px' }} to="/">Logout</NavLink>
+export default connect(mapStateToProps)(NavbarLoggedIn)
