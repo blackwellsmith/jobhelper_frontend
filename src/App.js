@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { getCurrentUser } from './actions/currentUser.js'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.js'
-import MainContainer from './components/MainContainer.js'
+//import MainContainer from './components/MainContainer.js'
 import Login from "./components/Loginform.js"
 import Logout from "./components/Logout.js"
 import Signup from "./components/Signup.js"
