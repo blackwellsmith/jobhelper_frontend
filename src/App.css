@@ -38,8 +38,9 @@
   }
 }
 .form-group {
+  background: 'blue';
+  text-align: center;
   
-  text-align:center;
 }
 
 html { 
@@ -49,3 +50,4 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+

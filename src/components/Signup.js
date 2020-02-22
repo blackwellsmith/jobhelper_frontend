@@ -23,6 +23,7 @@ const Signup = ({ signUpData, updateSignUp, signup }) => {
         //loginFormData.reset()
     }
     return (
+        
         <form onSubmit={handleOnSubmit}>
             <div className="form-group">
                 <div className="col-xs-4">
@@ -35,7 +36,8 @@ const Signup = ({ signUpData, updateSignUp, signup }) => {
                     <input placeholder="password" className="form-control input-lg" value={signUpData.password} name="password" type='text' onChange={handleOnChange} />
                 </div>
                 <button type="submit" className="btn btn-primary">Sign up</button>
-            </div>   
+            </div> 
+            <br></br>
         </form>
     )
 }
