@@ -1,18 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Login from "./Loginform.js"
-import Logout from "./Logout.js"
+import { NavLink } from 'react-router-dom';
 
 
 const Navbar = (props) => {
     
     return (
-        <div>
-            { props.currentUser ? <h1>Welcome, {props.currentUser.name}</h1> : <h1>Please log in</h1>}
-            { props.currentUser ? <Logout /> : <Login />}
+        <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>
+        <NavLink style={{ marginRight: '10px' }} to="/signup">Sign up</NavLink>
+        <NavLink style={{ marginRight: '10px' }} to="/login">Login</NavLink>
+        <NavLink style={{ marginRight: '10px' }} to="/logout">Logout</NavLink>
         </div>
     )
-}
+} 
 
 const mapStateToProps = ({ currentUser }) => {
     return {
@@ -23,4 +23,4 @@ const mapStateToProps = ({ currentUser }) => {
 
 export default connect(mapStateToProps)(Navbar)
 
-//
+//<NavLink style={{ marginRight: '10px' }} to="/">Logout</NavLink>
