@@ -9,6 +9,7 @@ import Home from './components/Home.js'
 import Login from "./components/Loginform.js"
 import Logout from "./components/Logout.js"
 import Signup from "./components/Signup.js"
+import Journalform from "./components/Journalform.js"
 
 class App extends React.Component {
 
@@ -25,7 +26,8 @@ class App extends React.Component {
             <>
             <NavbarLoggedIn />
               <Route exact path="/" component={Home} />
-              <Route exact path="/logout" component={Logout} />  
+              <Route exact path="/logout" component={Logout} /> 
+              <Route exact path="/journal" component={Journalform} />
             </>
           ) : (
             <>

@@ -10,6 +10,6 @@ export default (state = initialState, action) => {
         case "UPDATE_JOURNAL_FORM":
             return action.formData
         default:
-          return initialState
+          return state
     }
 } 

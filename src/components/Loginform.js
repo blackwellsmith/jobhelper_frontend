@@ -8,6 +8,7 @@ const Login = ({ loginFormData, updateLoginForm, login }) => {
     const handleOnChange = event => {
         event.preventDefault()
         const { name, value } = event.target
+        console.log(event)
         const updatedLogin = {
             ...loginFormData,
             [name]: value
@@ -27,7 +28,7 @@ const Login = ({ loginFormData, updateLoginForm, login }) => {
                 <div className="col-xs-4">
                     <input placeholder="email" className="form-control input-lg" value={loginFormData.email} name="email" type='text' onChange={handleOnChange} />
                 </div>
-                <div class="col-xs-4">
+                <div className="col-xs-4">
                     <input placeholder="password" className="form-control input-lg" value={loginFormData.password} name="password" type='text' onChange={handleOnChange} />
                 </div>
                 <button type="submit" className="btn btn-primary">Log in</button>
