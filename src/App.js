@@ -10,6 +10,7 @@ import Login from "./components/Loginform.js"
 import Logout from "./components/Logout.js"
 import Signup from "./components/Signup.js"
 import Journalform from "./components/Journalform.js"
+import Journals from "./components/JournalsContainer.js"
 
 class App extends React.Component {
 
@@ -28,6 +29,7 @@ class App extends React.Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/logout" component={Logout} /> 
               <Route exact path="/journal" component={Journalform} />
+              <Route exact path="/journals" component={Journals} />
             </>
           ) : (
             <>

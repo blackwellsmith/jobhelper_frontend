@@ -57,6 +57,7 @@ export const getCurrentUser = () => {
                     alert(user.error)
                 } else {
                     dispatch(setCurrentUser(user)) 
+                    dispatch(journalindex(user))
                 }
             })
         .catch(console.log)
