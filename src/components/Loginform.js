@@ -23,17 +23,22 @@ const Login = ({ loginFormData, updateLoginForm, login }) => {
         //loginFormData.reset()
     }
     return (
+        <div className="Login">
+            <br></br>
         <form onSubmit={handleOnSubmit}>
             <div className="form-group">
-                <div className="col-xs-4">
+                <div className="form">
                     <input placeholder="email" className="form-control input-lg" value={loginFormData.email} name="email" type='text' onChange={handleOnChange} required/>
                 </div>
-                <div className="col-xs-4">
+                    <br></br>
+                <div className="form">
                     <input placeholder="password" className="form-control input-lg" value={loginFormData.password} name="password" type='text' onChange={handleOnChange} required/>
                 </div>
                 <button type="submit" className="btn btn-primary">Log in</button>
             </div>   
         </form>
+    </div>        
+            
     )
 }
 const mapStateToProps = state => {

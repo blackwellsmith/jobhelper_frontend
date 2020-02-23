@@ -10,17 +10,17 @@ const Journals = ({ journalIndex }) => {
     
     return (
         <div className="JournalsContainer">
-            <h1>Your Journal Entries</h1>
+            <h1 style={{ color: 'blue' }}>Your Journal Entries</h1>
               <ButtonToolbar className="bt">
                 {journalIndex.map(journal => (
                 
                   <OverlayTrigger
                   trigger="click"
-                  key='bottom'
-                  placement='bottom'
+                  key={journal.id}
+                  placement='top'
                   overlay={
-                    <Popover id='popover-positioned-bottom'>
-                      <Popover.Title as="h3"><stron>Notes:</stron>{journal.entry}</Popover.Title>
+                    <Popover id='popover-positioned-right'>
+                      <Popover.Title as="h3"><strong>Notes: </strong>{journal.entry}</Popover.Title>
                       <Popover.Content>
                         <strong>People you connected with: </strong> {journal.meetups}
                         <strong> - Skills improvement: </strong> {journal.study}
@@ -29,7 +29,7 @@ const Journals = ({ journalIndex }) => {
                       </Popover.Content>
                     </Popover>
                   }>
-                    <Button className='button' variant="primary">{journal.created_at}</Button>
+                    <Button className='button' variant="primary">Date: {journal.created_at.substring(5, 7)}/{journal.created_at.substring(8, 10)}/{journal.created_at.substring(0, 4)}</Button>
                         
                   </OverlayTrigger>
                     

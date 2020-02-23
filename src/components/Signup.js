@@ -23,24 +23,29 @@ const Signup = ({ signUpData, updateSignUp, signup }) => {
         //loginFormData.reset()
     }
     return (
-        
+        <div className="Signup"> 
+      <br></br>      
         <form onSubmit={handleOnSubmit}>
             <div className="form-group">
-                <div className="col-xs-4">
+                <div className="form">
                     <input placeholder="name" className="form-control input-lg" value={signUpData.name} name="name" type='text' onChange={handleOnChange} required/>
                 </div>
-                <div className="col-xs-4">
+                    <br></br>
+                <div className="form">
                     <input placeholder="email" className="form-control input-lg" value={signUpData.email} name="email" type='text' onChange={handleOnChange} required/>
                 </div>
-                <div className="col-xs-4">
+                    <br></br>    
+                <div className="form">
                     <input placeholder="password" className="form-control input-lg" value={signUpData.password} name="password" type='text' onChange={handleOnChange} required/>
                 </div>
                 <button type="submit" className="btn btn-primary">Sign up</button>
             </div> 
             <br></br>
         </form>
+    </div>
+
     )
-}
+        }
 const mapStateToProps = state => {
     return {
         signUpData: state.signUp

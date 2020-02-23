@@ -25,6 +25,7 @@ class App extends React.Component {
         <div className="App">
           {loggedin ? (
             <>
+            <h1>Heard</h1>
             <NavbarLoggedIn />
               <Route exact path="/" component={Home} />
               <Route exact path="/logout" component={Logout} /> 
@@ -32,7 +33,8 @@ class App extends React.Component {
               <Route exact path="/journals" component={Journals} />
             </>
           ) : (
-            <>
+              <>
+            <h1>Heard</h1>
             <Navbar />
               <Route exact path="/" component={Home} />
               <Route exact path="/signup" component={Signup} />
