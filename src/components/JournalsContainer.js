@@ -10,7 +10,7 @@ const Journals = ({ journalIndex }) => {
     
     return (
         <div className="JournalsContainer">
-            <h1 style={{ color: 'blue' }}>Your Journal Entries</h1>
+            <h2 style={{ color: 'blue' }}>Your Journal Entries</h2>
               <ButtonToolbar className="bt">
                 {journalIndex.map(journal => (
                 
@@ -19,7 +19,7 @@ const Journals = ({ journalIndex }) => {
                   key={journal.id}
                   placement='top'
                   overlay={
-                    <Popover id='popover-positioned-right'>
+                    <Popover id='popover-positioned-top'>
                       <Popover.Title as="h3"><strong>Notes: </strong>{journal.entry}</Popover.Title>
                       <Popover.Content>
                         <strong>People you connected with: </strong> {journal.meetups}

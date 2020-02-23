@@ -69,8 +69,15 @@ html {
 }
 
 .form {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-small {
+  margin-left: 70px;
+  margin-right: 70px;
   margin-top: 20px;
   margin-bottom: 20px;
 }

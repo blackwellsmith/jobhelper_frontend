@@ -30,19 +30,19 @@ const JournalForm = ({ journalFormData, updateJournalForm, journalentry }) => {
                 <div className="form">
                     <input placeholder="notes" className="form-control input-lg" value={journalFormData.entry} name="entry" type='text' onChange={handleOnChange} required/>
                     </div>
-                    <br></br>
+                    
                 <div className="form">
                     <input placeholder="who did you meet" className="form-control input-lg" value={journalFormData.meetups} name="meetups" type='text' onChange={handleOnChange} required/>
                     </div>
-                    <br></br>
+                    
                 <div className="form">
                     <input placeholder="how did you improve" className="form-control input-lg" value={journalFormData.study} name="study" type='text' onChange={handleOnChange} required/>
                     </div>
-                    <br></br>
+                    
                 <div className="form">
                     <input placeholder="jobs apllied" className="form-control input-lg" value={journalFormData.applications} name="applications" type='text' onChange={handleOnChange} required/>
                     </div>
-                    <br></br>
+                    
                 <div className="form">
                     <input placeholder="what are your goals" className="form-control input-lg" value={journalFormData.goals} name="goals" type='text' onChange={handleOnChange} required/>
                     </div>

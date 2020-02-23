@@ -27,11 +27,11 @@ const Login = ({ loginFormData, updateLoginForm, login }) => {
             <br></br>
         <form onSubmit={handleOnSubmit}>
             <div className="form-group">
-                <div className="form">
+                <div className="form-small">
                     <input placeholder="email" className="form-control input-lg" value={loginFormData.email} name="email" type='text' onChange={handleOnChange} required/>
                 </div>
                     <br></br>
-                <div className="form">
+                <div className="form-small">
                     <input placeholder="password" className="form-control input-lg" value={loginFormData.password} name="password" type='text' onChange={handleOnChange} required/>
                 </div>
                 <button type="submit" className="btn btn-primary">Log in</button>
