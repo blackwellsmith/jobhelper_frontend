@@ -16,11 +16,11 @@ const JournalForm = ({ journalFormData, updateJournalForm, journalentry }) => {
     }
 
     const handleOnSubmit = event => {
-        //event.preventDefault()
+        event.preventDefault()
         journalentry(journalFormData)
         //login(loginFormData)
         
-        //loginFormData.reset()
+        //loginFormData.reset() 
     }
     return (
         

@@ -1,3 +1,4 @@
+import { journalindex } from './journals.js'
 export const updateJournalForm = (formData) => {
     
     return {
@@ -5,6 +6,8 @@ export const updateJournalForm = (formData) => {
         formData
     }
 }
+
+
 
 export const journalentry = credentials => {
     console.log("wtf", credentials)
@@ -23,7 +26,7 @@ export const journalentry = credentials => {
                     alert(user.error)
                 } else {
                     console.log(credentials)
-                    dispatch(console.log(credentials)) 
+                    dispatch(journalindex(credentials)) 
                 }
             })
         .catch(console.log)

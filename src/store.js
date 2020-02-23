@@ -4,6 +4,7 @@ import currentUser from './reducers/currentUser.js'
 import loginForm from './reducers/loginForm.js'
 import signUp from './reducers/signUp.js'
 import journalForm from './reducers/journalForm.js'
+import journals from './reducers/journals.js'
 import thunk from 'redux-thunk'
 
 const reducer = combineReducers({
@@ -11,7 +12,8 @@ const reducer = combineReducers({
     currentUser,
     loginForm,
     signUp,
-    journalForm
+    journalForm,
+    journals
 })
 
 const composeEnhancer = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;

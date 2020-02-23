@@ -1,3 +1,4 @@
+import { journalindex } from './journals.js'
 export const setCurrentUser = user => {
     return {
         type: "SET_CURRENT_USER",
@@ -5,7 +6,7 @@ export const setCurrentUser = user => {
 
     }
 }
-
+ 
 export const login = credentials => {
     console.log("wtf", credentials)
     return dispatch => {
@@ -23,6 +24,7 @@ export const login = credentials => {
                     alert(user.error)
                 } else {
                     dispatch(setCurrentUser(user)) 
+                    dispatch(journalindex(user))
                 }
             })
         .catch(console.log)

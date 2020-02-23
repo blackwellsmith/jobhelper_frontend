@@ -27,13 +27,13 @@ const Signup = ({ signUpData, updateSignUp, signup }) => {
         <form onSubmit={handleOnSubmit}>
             <div className="form-group">
                 <div className="col-xs-4">
-                    <input placeholder="name" className="form-control input-lg" value={signUpData.name} name="name" type='text' onChange={handleOnChange} />
+                    <input placeholder="name" className="form-control input-lg" value={signUpData.name} name="name" type='text' onChange={handleOnChange} required/>
                 </div>
                 <div className="col-xs-4">
-                    <input placeholder="email" className="form-control input-lg" value={signUpData.email} name="email" type='text' onChange={handleOnChange} />
+                    <input placeholder="email" className="form-control input-lg" value={signUpData.email} name="email" type='text' onChange={handleOnChange} required/>
                 </div>
                 <div className="col-xs-4">
-                    <input placeholder="password" className="form-control input-lg" value={signUpData.password} name="password" type='text' onChange={handleOnChange} />
+                    <input placeholder="password" className="form-control input-lg" value={signUpData.password} name="password" type='text' onChange={handleOnChange} required/>
                 </div>
                 <button type="submit" className="btn btn-primary">Sign up</button>
             </div> 
