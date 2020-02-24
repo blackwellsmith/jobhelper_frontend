@@ -12,7 +12,7 @@ class Home extends React.Component {
       return (
         <SliderWrapper>
               <div className='home'>
-                 <h1 className="homie" style={{ color: 'blue' }} >It's rough out there get Heard</h1>
+                 <h1 className="homie" style={{ color: 'blue' }} ></h1>
                  <br></br>
                  <div>
                  <CarouselComponent />
