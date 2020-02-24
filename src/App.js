@@ -27,7 +27,8 @@ class App extends React.Component {
           
           {loggedin ? (
             <>
-            <h1>Heard</h1>
+              <h1>Welcome! {this.props.currentUser.name}</h1>
+              
             <NavbarLoggedIn />
               <Route exact path="/" component={Home} />
               <Route exact path="/logout" component={Logout} /> 
@@ -53,9 +54,10 @@ class App extends React.Component {
     );
   }
 }
-const mapStateToProps = ({ currentUser }) => {
+const mapStateToProps = ({ currentUser, currentJobGoal }) => {
   return {
-    currentUser
+    currentUser,
+    currentJobGoal
   }
 }
 

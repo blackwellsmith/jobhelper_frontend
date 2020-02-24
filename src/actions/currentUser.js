@@ -1,5 +1,6 @@
 import { journalindex } from './journals.js'
 import { jobGoal } from './currentJobGoal.js'
+import { clearCurrentJobGoal } from './currentJobGoal.js'
 
 export const setCurrentUser = user => {
     return {
@@ -36,6 +37,7 @@ export const login = credentials => {
 
 export const logout = () => {
     return (dispatch) => {
+        dispatch(clearCurrentJobGoal())
         dispatch(clearCurrentUser())
         return fetch('http://localhost:3000/logout', {
             credentials: 'include',

@@ -5,6 +5,12 @@ export const setCurrentJobGoal = goal => {
     }
 }
 
+export const clearCurrentJobGoal = () => {
+    return {
+        type: "CLEAR_CURRENT_JOB_GOAL"
+    }
+}
+
 export const jobGoal = credentials => {
     console.log("wtf", credentials)
     return dispatch => {
