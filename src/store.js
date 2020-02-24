@@ -6,6 +6,7 @@ import signUp from './reducers/signUp.js'
 import journalForm from './reducers/journalForm.js'
 import journals from './reducers/journals.js'
 import jobSearchGoal from './reducers/jobSearchGoal.js'
+import currentJobGoal from './reducers/currentJobGoal.js'
 import thunk from 'redux-thunk'
 
 const reducer = combineReducers({
@@ -15,7 +16,8 @@ const reducer = combineReducers({
     signUp,
     journalForm,
     journals,
-    jobSearchGoal
+    jobSearchGoal,
+    currentJobGoal
 })
 
 const composeEnhancer = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;

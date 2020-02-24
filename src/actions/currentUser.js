@@ -1,4 +1,6 @@
 import { journalindex } from './journals.js'
+import { jobGoal } from './currentJobGoal.js'
+
 export const setCurrentUser = user => {
     return {
         type: "SET_CURRENT_USER",
@@ -25,6 +27,7 @@ export const login = credentials => {
                 } else {
                     dispatch(setCurrentUser(user)) 
                     dispatch(journalindex(user))
+                    dispatch(jobGoal(user))
                 }
             })
         .catch(console.log)
@@ -58,6 +61,7 @@ export const getCurrentUser = () => {
                 } else {
                     dispatch(setCurrentUser(user)) 
                     dispatch(journalindex(user))
+                    dispatch(jobGoal(user))
                 }
             })
         .catch(console.log)

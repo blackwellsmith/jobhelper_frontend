@@ -11,6 +11,7 @@ import Logout from "./components/Logout.js"
 import Signup from "./components/Signup.js"
 import Journalform from "./components/Journalform.js"
 import Journals from "./components/JournalsContainer.js"
+import Job from "./components/JobSearchGoalForm.js"
 
 class App extends React.Component {
 
@@ -23,6 +24,7 @@ class App extends React.Component {
     return (
       <Router>
         <div className="App">
+          
           {loggedin ? (
             <>
             <h1>Heard</h1>
@@ -31,7 +33,9 @@ class App extends React.Component {
               <Route exact path="/logout" component={Logout} /> 
               <Route exact path="/journal" component={Journalform} />
               <Route exact path="/journals" component={Journals} />
+              <div><Job /></div>
             </>
+            
           ) : (
               <>
             <h1>Heard</h1>
@@ -41,8 +45,10 @@ class App extends React.Component {
               <Route exact path="/login" component={Login} />
             </>
             )}
+          
         </div>
       </Router>
+      
       
     );
   }

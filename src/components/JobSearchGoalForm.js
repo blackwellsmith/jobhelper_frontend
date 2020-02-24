@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { createJobGoal } from '../actions/jobSearchGoal.js' 
+import { createJobGoal, jobGoal } from '../actions/jobSearchGoal.js' 
 
-const Job = ({ JobGoalFormData, createJobGoal, login }) => {
+const Job = ({ JobGoalFormData, createJobGoal, jobGoal }) => {
     
     const handleOnChange = event => {
         event.preventDefault()
@@ -17,9 +17,9 @@ const Job = ({ JobGoalFormData, createJobGoal, login }) => {
 
     const handleOnSubmit = event => {
         event.preventDefault()
-        login(JobGoalFormData)
+        jobGoal(JobGoalFormData)
         
-        //loginFormData.reset()
+      
     }
     return (
         <div className="JobGoal">
@@ -27,13 +27,18 @@ const Job = ({ JobGoalFormData, createJobGoal, login }) => {
         <form onSubmit={handleOnSubmit}>
             <div className="form-group">
                 <div className="form-small">
-                    <input placeholder="email" className="form-control input-lg" value={loginFormData.email} name="email" type='text' onChange={handleOnChange} required/>
+                    <input placeholder="Job goal description" className="form-control input-lg" value={JobGoalFormData.name} name="name" type='text' onChange={handleOnChange} required/>
                 </div>
                     <br></br>
                 <div className="form-small">
-                    <input placeholder="password" className="form-control input-lg" value={loginFormData.password} name="password" type='text' onChange={handleOnChange} required/>
+                    <input placeholder="Location of job: Dallas, Chattanooga, Remote, abroad...." className="form-control input-lg" value={JobGoalFormData.location} name="location" type='text' onChange={handleOnChange} required/>
+                    </div>
+                    <br></br>
+                <div className="form-small">
+                    <input placeholder="What is your desired comensation? Recognize your strengths don't sell yourself short..." className="form-control input-lg" value={JobGoalFormData.pay} name="pay" type='text' onChange={handleOnChange} required/>
                 </div>
-                <button type="submit" className="btn btn-primary">Log in</button>
+                    <br></br>
+                <button type="submit" className="btn btn-primary">Submit</button>
             </div>   
         </form>
     </div>        
