@@ -13,6 +13,8 @@ import Signup from "./components/Signup.js"
 import Journalform from "./components/Journalform.js"
 import Journals from "./components/JournalsContainer.js"
 import Contacts from "./components/ContactsContainer.js"
+import ContactForm from "./components/ContactForm.js"
+
 
 
 class App extends React.Component {
@@ -41,6 +43,7 @@ class App extends React.Component {
               <Route exact path="/journals" component={Journals} />
               <Route exact path="/job" component={Job} />
               <Route exact path="/contacts" component={Contacts} />
+              <Route exact path="/contact" component={ContactForm} />
               {/* <div><Job /></div> */}
             </>
             

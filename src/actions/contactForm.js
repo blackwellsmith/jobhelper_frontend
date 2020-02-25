@@ -1,5 +1,5 @@
-import { contactindex } from './contacts.js'
-export const updateJournalForm = (formData) => {
+import { contactsindex } from './contacts.js'
+export const updateContactForm = (formData) => {
     
     return {
         type: "UPDATE_CONTACT_FORM",
@@ -26,7 +26,7 @@ export const newcontact = credentials => {
                     alert(contact.error)
                 } else {
                     console.log(credentials)
-                    dispatch(contactindex(credentials)) 
+                    dispatch(contactsindex(credentials)) 
                 }
             })
         .catch(console.log)
