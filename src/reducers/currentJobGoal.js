@@ -6,7 +6,7 @@ export default (state = initialstate , action) => {
             console.log(action.goal)
             return  action.goal 
         case "CLEAR_CURRENT_JOB_GOAL":
-            return null
+            return initialstate
         default:
             return state
     }

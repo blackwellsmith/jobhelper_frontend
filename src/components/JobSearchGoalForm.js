@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { createJobGoal, jobGoal } from '../actions/jobSearchGoal.js' 
 
-const Job = ({ JobGoalFormData, createJobGoal, jobGoal }) => {
+import { createJobGoal, postJobGoal } from '../actions/jobSearchGoal.js' 
+
+const Job = ({ JobGoalFormData, createJobGoal }) => {
     
     const handleOnChange = event => {
         event.preventDefault()
@@ -17,7 +18,7 @@ const Job = ({ JobGoalFormData, createJobGoal, jobGoal }) => {
 
     const handleOnSubmit = event => {
         event.preventDefault()
-        jobGoal(JobGoalFormData)
+        postJobGoal(JobGoalFormData)
         
       
     }
