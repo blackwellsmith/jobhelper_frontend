@@ -17,8 +17,9 @@ border: 2.5px solid white;
 const Page = styled.div`
 
 width: 100%;
-height: 140px;
+height: 180px;
 padding: 30px;
+padding-bottom: 30px;
 `
 
 
@@ -35,13 +36,13 @@ class CarouselComponent extends React.Component {
         return (
             <Wrapper>
                 <Slider {...settings}>
-                    <Page><h2 style={{ color: 'white' }}> It's rough out there.... time to get <span style={{ color: 'blue' }}>Heard</span></h2></Page>
-                    <Page><h2 style={{ color: 'white' }}> Keeping organized and on track can be a struggle </h2></Page>
-                    <Page><h2 style={{ color: 'white' }}> A job search journal is essential an tool for our busy world </h2></Page>
-                    <Page><h2 style={{ color: 'white' }}> Heard allows you to keep track of your contacts and daily job search activities</h2></Page>
-                    <Page><h2 style={{ color: 'white' }}> Heard is free all we ask is that you use it everyday during your job search</h2></Page>
-                    <Page><h2 style={{ color: 'white' }}> Heard won't get the job for you but it will help you get in the right mindset</h2></Page>                   
-                    <Page><h2 style={{ color: 'white' }}> Thank you for your time! Have a great day!</h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> It's rough out there.... time to get <span style={{ color: 'blue' }}>Heard</span>.</h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> We believe staying organized and being positive during your job search will return the best possible results.</h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> A job search journal is essential an tool for our busy world. </h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> Heard allows you to keep track of your contacts and daily job search activities.</h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> Heard is free all we ask is that you use it everyday during your job search.</h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> Heard won't get the job for you but it will help you get in the right mindset.</h2></Page>                   
+                    <Page><h2 style={{ color: 'white' }}> Get seen get <span style={{ color: 'blue' }}>Heard</span>.</h2></Page>
                 </Slider>
               
             </Wrapper>     
