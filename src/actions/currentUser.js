@@ -1,6 +1,7 @@
 import { journalindex } from './journals.js'
 import { jobGoal } from './currentJobGoal.js'
 import { clearCurrentJobGoal } from './currentJobGoal.js'
+import { contactsindex } from './contacts.js'
 
 export const setCurrentUser = user => {
     return {

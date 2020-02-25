@@ -22,7 +22,7 @@ export const contactsindex = () => {
                     alert(contacts.error)
                 } else {
                     console.log(contacts)
-                    dispatch(setUserConntacts(contacts)) 
+                    dispatch(setUserContacts(contacts)) 
                 }
             })
         .catch(console.log)

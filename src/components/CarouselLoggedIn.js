@@ -36,7 +36,7 @@ class CarouselComponentLoggedIn extends React.Component {
         return (
             <Wrapper>
                 <Slider {...settings}>
-                    <Page><h2 style={{ color: 'white' }}> something different <span style={{ color: 'blue' }}>Heard</span></h2></Page>
+                    <Page><h2 style={{ color: 'white' }}>So yo want a job as a  <span style={{ color: 'darkblue' }}>{this.props.currentJobGoal.name}</span>.</h2></Page>
                     <Page><h2 style={{ color: 'white' }}> Keeping organized and on track can be a struggle </h2></Page>
                     <Page><h2 style={{ color: 'white' }}> A job search journal is essential an tool for our busy world </h2></Page>
                     <Page><h2 style={{ color: 'white' }}> Heard allows you to keep track of your contacts and daily job search activities</h2></Page>

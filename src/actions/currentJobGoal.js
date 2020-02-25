@@ -28,7 +28,7 @@ export const jobGoal = credentials => {
                     alert(user.error)
                 } else {
                     dispatch(setCurrentJobGoal(user)) 
-                    
+                    console.log(user)
                 }
             })
         .catch(console.log)
