@@ -8,7 +8,7 @@ const NavbarLoggedIn = () => {
     
     return (
         <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>
-            <NavLink style={{ marginRight: '10px' }} to="/">Home </NavLink>
+        <NavLink style={{ marginRight: '10px' }} to="/">About </NavLink>
         <NavLink style={{ marginRight: '10px' }} to="/logout"> Logout </NavLink>
         <NavLink style={{ marginRight: '10px' }} to="/journal"> Make Journal Entry </NavLink>
         <NavLink style={{ marginRight: '10px' }} to="/journals"> Daily Journals </NavLink>    

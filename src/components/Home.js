@@ -1,6 +1,8 @@
 import React from 'react';
 import CarouselComponent from './Carousel.js'
+import CarouselComponentLoggedIn from './CarouselLoggedIn.js'
 import styled from 'styled-components';
+import { connect } from 'react-redux'
 
 const SliderWrapper = styled.div`
   
@@ -15,12 +17,16 @@ class Home extends React.Component {
                  
                  <br></br>
                  <div>
-                 <CarouselComponent />
+              {this.props.currentUser ? <CarouselComponentLoggedIn /> : <CarouselComponent />}
                  </div>
               </div>
         </SliderWrapper>
           )
   }
 }
+
+const mapStateToProps = (state) => {
+  return { currentUser: state.currentUser}
+}
  
-export default Home;
+export default connect(mapStateToProps) (Home);

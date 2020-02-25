@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.js'
 import NavbarLoggedIn from './components/NavbarLoggedIn.js'
 import Home from './components/Home.js'
-import HomeLoggedIn from './components/HomeLoggedIn.js'
+
 import Login from "./components/Loginform.js"
 import Logout from "./components/Logout.js"
 import Signup from "./components/Signup.js"
@@ -33,7 +33,7 @@ class App extends React.Component {
               
              {/* <div><h2>{this.props.currentJobGoal.name}</h2></div> */}
             <NavbarLoggedIn />
-              <Route exact path="/" component={HomeLoggedIn} />
+              <Route exact path="/" component={Home} />
               <Route exact path="/logout" component={Logout} /> 
               <Route exact path="/journal" component={Journalform} />
               <Route exact path="/journals" component={Journals} />
