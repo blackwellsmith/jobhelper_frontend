@@ -8,7 +8,7 @@ export const setUserJournal = index => {
 export const journalindex = () => {
     
     return dispatch => {
-        return fetch("http://localhost:3000/journalindex", {
+        return fetch("http://localhost:3000/journalindex", { 
             credentials: "include",
             method: "GET",
             headers: {

@@ -30,7 +30,7 @@ export const login = credentials => {
                     dispatch(setCurrentUser(user)) 
                     dispatch(journalindex(user))
                     dispatch(jobGoal(user))
-                    dispatch(contactsindex())
+                    
                 }
             })
         .catch(console.log)
@@ -67,6 +67,7 @@ export const getCurrentUser = () => {
                    dispatch(jobGoal())
                     dispatch(setCurrentUser(user)) 
                     dispatch(journalindex(user))
+                    dispatch(contactsindex())
                 }
             })
         .catch(console.log)

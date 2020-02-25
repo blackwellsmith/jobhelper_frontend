@@ -60,7 +60,7 @@ html {
   justify-content: center;
 }
 
-.JournalsContainer, .JournalForm, .home, .Login, .Signup, .JobGoal { 
+.JournalsContainer, .JournalForm, .home, .Login, .Signup, .JobGoal, .ContactsContainer { 
   background: url(https://c.wallhere.com/photos/fd/99/nature_landscape_wind_sea_monochrome_mountains_waves_clouds-119368.jpg!d) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
