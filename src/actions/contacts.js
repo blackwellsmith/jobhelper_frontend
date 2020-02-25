@@ -8,7 +8,7 @@ export const setUserContacts = index => {
 export const contactsindex = () => {
     
     return dispatch => {
-        return fetch("http://localhost:3000/journalindex", {
+        return fetch("http://localhost:3000/contacts", {
             credentials: "include",
             method: "GET",
             headers: {
@@ -17,12 +17,12 @@ export const contactsindex = () => {
             
         })
             .then(r => r.json())
-            .then(j => {
-                if (j.error) {
-                    alert(j.error)
+            .then(contacts => {
+                if (contacts.error) {
+                    alert(contacts.error)
                 } else {
-                    console.log(j)
-                    dispatch(setUserJournal(j)) 
+                    console.log(contacts)
+                    dispatch(setUserConntacts(contacts)) 
                 }
             })
         .catch(console.log)
