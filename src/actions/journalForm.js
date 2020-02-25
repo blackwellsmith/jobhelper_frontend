@@ -5,7 +5,7 @@ export const updateJournalForm = (formData) => {
         type: "UPDATE_JOURNAL_FORM",
         formData
     }
-}
+} 
 
 
 

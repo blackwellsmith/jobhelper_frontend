@@ -2,7 +2,7 @@ const initialState = {
     name: "",
     company: "",
     position: "",
-    contact_infp: ""
+    contact_info: ""
 }
 export default (state = initialState, action) => {
     switch (action.type) {
