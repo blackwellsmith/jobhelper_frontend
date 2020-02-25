@@ -7,7 +7,7 @@ const SliderWrapper = styled.div`
   justify-content:center;
   `
 
-class Home extends React.Component {
+class HomeLoggedIn extends React.Component {
     render() {
       return (
         <SliderWrapper>
@@ -23,4 +23,4 @@ class Home extends React.Component {
   }
 }
  
-export default Home;
+export default HomeLoggedIn;

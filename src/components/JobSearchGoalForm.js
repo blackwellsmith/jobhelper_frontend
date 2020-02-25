@@ -47,6 +47,7 @@ const Job = ({ JobGoalFormData, createJobGoal, jobGoal }) => {
 }
 const mapStateToProps = state => {
     return {
+        
         JobGoalFormData: state.jobSearchGoal
     } 
 } 

@@ -48,6 +48,7 @@ export const logout = () => {
 
 export const getCurrentUser = () => {
     return dispatch => {
+        //dispatch(jobGoal())
         return fetch("http://localhost:3000/get_current_user", {
             credentials: "include",
             method: "GET",
@@ -61,9 +62,9 @@ export const getCurrentUser = () => {
                 if (user.error) {
                     alert(user.error)
                 } else {
+                   dispatch(jobGoal())
                     dispatch(setCurrentUser(user)) 
                     dispatch(journalindex(user))
-                    dispatch(jobGoal(user))
                 }
             })
         .catch(console.log)
