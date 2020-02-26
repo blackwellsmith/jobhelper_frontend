@@ -19,8 +19,6 @@ const Login = ({ loginFormData, updateLoginForm, login }) => {
     const handleOnSubmit = event => {
         event.preventDefault()
         login(loginFormData)
-        
-        //loginFormData.reset()
     }
     return (
         <div className="Login">

@@ -7,7 +7,6 @@ const ContactForm = ({ contactFormData, updateContactForm, newcontact }) => {
     const handleOnChange = event => {
         event.preventDefault()
         const { name, value } = event.target
-        console.log(event.target)
         const updatedContactForm = {
             ...contactFormData,
             [name]: value
@@ -18,9 +17,6 @@ const ContactForm = ({ contactFormData, updateContactForm, newcontact }) => {
     const handleOnSubmit = event => {
         event.preventDefault()
         newcontact(contactFormData)
-        //login(loginFormData)
-        
-        //loginFormData.reset() 
     }
     return (
         <div className="ContactForm"> 

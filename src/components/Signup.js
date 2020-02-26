@@ -18,9 +18,6 @@ const Signup = ({ signUpData, updateSignUp, signup }) => {
     const handleOnSubmit = event => {
         event.preventDefault()
         signup(signUpData)
-        //login(loginFormData)
-        
-        //loginFormData.reset()
     }
     return (
         <div className="Signup"> 
