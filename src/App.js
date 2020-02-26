@@ -33,7 +33,8 @@ class App extends React.Component {
           
           {loggedin ? (
             <>
-            <h1><Logout />Welcome! {this.props.currentUser.name} </h1>
+           <Logout /> <h1>Hello {this.props.currentUser.name} </h1>
+            <h2></h2> 
             <NavbarLoggedIn />
               <Route exact path="/" component={Home} /> 
               <Route exact path="/journal" component={Journalform} />

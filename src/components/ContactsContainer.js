@@ -13,7 +13,7 @@ const Contacts = ({ contactsIndex }) => {
         <div className="ContactsContainer">
             <h2 ><Badge variant="primary">Your Contacts</Badge></h2>
               <ButtonToolbar className="bt">
-                {contactsIndex.map(contact => (
+                {contactsIndex.sort((a, b) => a.name.localeCompare(b.name)).map(contact => (
                 
                   <OverlayTrigger
                   trigger="click"
@@ -29,7 +29,7 @@ const Contacts = ({ contactsIndex }) => {
                       </Popover.Content>
                     </Popover>
                   }>
-                    <Button className='button' variant="primary">Date: {contact.created_at.substring(5, 7)}/{contact.created_at.substring(8, 10)}/{contact.created_at.substring(0, 4)}</Button>
+                    <Button className='button' variant="primary">{contact.name}</Button>
                         
                   </OverlayTrigger>
                     
