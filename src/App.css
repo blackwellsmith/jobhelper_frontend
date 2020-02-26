@@ -81,3 +81,12 @@ html {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.Logout {
+  position: absolute;
+  top: absolute;
+  right: 0;
+  width: 100px;
+  height: 100px;
+
+} 

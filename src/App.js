@@ -33,18 +33,16 @@ class App extends React.Component {
           
           {loggedin ? (
             <>
-              <h1>Welcome! {this.props.currentUser.name} </h1>
-              
-             {/* <div><h2>{this.props.currentJobGoal.name}</h2></div> */}
+            <h1><Logout />Welcome! {this.props.currentUser.name} </h1>
             <NavbarLoggedIn />
-              <Route exact path="/" component={Home} />
-              <Route exact path="/logout" component={Logout} /> 
+              <Route exact path="/" component={Home} /> 
               <Route exact path="/journal" component={Journalform} />
               <Route exact path="/journals" component={Journals} />
               <Route exact path="/job" component={Job} />
               <Route exact path="/contacts" component={Contacts} />
               <Route exact path="/contact" component={ContactForm} />
-              {/* <div><Job /></div> */}
+              
+              
             </>
             
           ) : (

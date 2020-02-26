@@ -4,13 +4,14 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Popover from 'react-bootstrap/Popover'
 import Button from 'react-bootstrap/Button'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
+import Badge from 'react-bootstrap/Badge'
 
 
 const Contacts = ({ contactsIndex }) => {
     
     return (
         <div className="ContactsContainer">
-            <h2 style={{ color: 'blue' }}>Your Contacts</h2>
+            <h2 ><Badge variant="primary">Your Contacts</Badge></h2>
               <ButtonToolbar className="bt">
                 {contactsIndex.map(contact => (
                 

@@ -4,13 +4,13 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Popover from 'react-bootstrap/Popover'
 import Button from 'react-bootstrap/Button'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
-
+import Badge from 'react-bootstrap/Badge'
 
 const Journals = ({ journalIndex }) => {
     
     return (
         <div className="JournalsContainer">
-            <h2 style={{ color: 'blue' }}>Your Journal Entries</h2>
+            <h2 ><Badge variant="primary">Your Journal Entries</Badge></h2>
               <ButtonToolbar className="bt">
                 {journalIndex.map(journal => (
                 
