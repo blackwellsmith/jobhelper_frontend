@@ -4,6 +4,7 @@ const initialState = {
     position: "",
     contact_info: ""
 }
+
 export default (state = initialState, action) => {
     switch (action.type) {
         case "UPDATE_CONTACT_FORM":
