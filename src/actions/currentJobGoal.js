@@ -14,6 +14,7 @@ export const clearCurrentJobGoal = () => {
 export const jobGoal = credentials => {
     console.log("wtf", credentials)
     return dispatch => {
+        console.log("credentials")
         return fetch("http://localhost:3000/jobs", {
             credentials: "include",
             method: "GET",

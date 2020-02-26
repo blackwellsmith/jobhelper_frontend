@@ -6,7 +6,7 @@ export const setUserContacts = index => {
 }
 
 export const contactsindex = () => {
-    
+    console.log('contact index')
     return dispatch => {
         return fetch("http://localhost:3000/contacts", {
             credentials: "include",

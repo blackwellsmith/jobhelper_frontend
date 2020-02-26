@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { createJobGoal, postJobGoal } from '../actions/jobSearchGoal.js' 
 
-const Job = ({ JobGoalFormData, createJobGoal }) => {
+const Job = ({ JobGoalFormData, createJobGoal, postJobGoal }) => {
     
     const handleOnChange = event => {
         event.preventDefault()
@@ -53,4 +53,4 @@ const mapStateToProps = state => {
     } 
 } 
 
-export default connect(mapStateToProps, { createJobGoal })(Job)
+export default connect(mapStateToProps, { createJobGoal ,postJobGoal })(Job)
