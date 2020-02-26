@@ -21,12 +21,11 @@ export const journalentry = credentials => {
             body: JSON.stringify(credentials)
         })
             .then(r => r.json())
-            .then(user => {
-                if (user.error) {
-                    alert(user.error)
+            .then(entry => {
+                if (entry.error) {
+                    alert(entry.error)
                 } else {
-                    console.log(credentials)
-                    dispatch(journalindex(credentials)) 
+                    dispatch(journalindex()) 
                 }
             })
         .catch(console.log)

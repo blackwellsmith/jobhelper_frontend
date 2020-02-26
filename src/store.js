@@ -1,5 +1,4 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
-import users from './reducers/users.js'
 import currentUser from './reducers/currentUser.js'
 import loginForm from './reducers/loginForm.js'
 import signUp from './reducers/signUp.js'
@@ -12,7 +11,6 @@ import currentJobGoal from './reducers/currentJobGoal.js'
 import thunk from 'redux-thunk'
 
 const reducer = combineReducers({
-    users: users,
     currentUser,
     loginForm,
     signUp,

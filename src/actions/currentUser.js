@@ -64,7 +64,7 @@ export const getCurrentUser = () => {
                 if (user.error) {
                     alert(user.error)
                 } else {
-                   dispatch(jobGoal())
+                    dispatch(jobGoal())
                     dispatch(setCurrentUser(user)) 
                     dispatch(journalindex(user))
                     dispatch(contactsindex())

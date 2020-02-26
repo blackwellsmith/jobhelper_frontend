@@ -9,7 +9,6 @@ export const updateSignUp = (formData) => {
 
 
 export const signup = credentials => {
-    console.log("wtf", credentials)
     return dispatch => {
         return fetch("http://localhost:3000/signup", {
             credentials: "include",
@@ -24,7 +23,6 @@ export const signup = credentials => {
                 if (user.error) {
                     alert(user.error)
                 } else {
-                    console.log(credentials)
                     dispatch(login(credentials)) 
                 }
             })

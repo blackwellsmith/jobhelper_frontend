@@ -21,7 +21,6 @@ export const journalindex = () => {
                 if (j.error) {
                     alert(j.error)
                 } else {
-                    console.log(j)
                     dispatch(setUserJournal(j)) 
                 }
             })

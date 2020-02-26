@@ -24,12 +24,12 @@ export const jobGoal = credentials => {
             
         })
             .then(r => r.json())
-            .then(user => {
-                if (user.error) {
-                    alert(user.error)
+            .then(job => {
+                if (job.error) {
+                    alert(job.error)
                 } else {
-                    dispatch(setCurrentJobGoal(user)) 
-                    console.log(user)
+                    dispatch(setCurrentJobGoal(job)) 
+                    console.log(job)
                 }
             })
         .catch(console.log)

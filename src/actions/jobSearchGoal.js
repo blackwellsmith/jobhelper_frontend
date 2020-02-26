@@ -25,9 +25,6 @@ export const postJobGoal = credentials => {
                 if (job.error) {
                     alert(job.error)
                 } else {
-                    console.log(job)
-                    // dispatch(setCurrentUser(job)) 
-                    // dispatch(journalindex(job))
                     dispatch(jobGoal(job))
                 }
             })
