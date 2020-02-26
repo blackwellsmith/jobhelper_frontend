@@ -37,14 +37,14 @@ class CarouselComponentLoggedIn extends React.Component {
         return (
             <Wrapper>
                 <Slider {...settings}>
-                    <Page><h2 style={{ color: 'white' }}> Here is a list of habits for your successful job search. </h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> Here are some suggestions for your successful job search. </h2></Page>
                     <Page><h2 style={{ color: 'white' }}> Keep a positive attitude. </h2></Page>
-                    <Page><h2 style={{ color: 'white' }}> Use Heard everyday, keeping track of what you do can keep you on headed down the correct path. </h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> Use Heard everyday, keep track of your activities and contacts. </h2></Page>
                     <Page><h2 style={{ color: 'white' }}> It's not what you know it's who you know, fill out your contacts list and use it.</h2></Page>
-                    <Page><h2 style={{ color: 'white' }}> Buy someone coffee 3 times a week, get out talk to people you never know what can happen. Get seen be <span style={{ color: 'blue' }}>Heard</span>.</h2></Page>
-                    <Page><h2 style={{ color: 'white' }}> Keep track of what positions you have applied in your journal, use that information for follow up calls.</h2></Page>                   
-                    <Page><h2 style={{ color: 'white' }}> Always work to improve your professional skills. What your reading or doing is a great way to show your willing to learn.</h2></Page>
-                    <Page><h2 style={{ color: 'white' }}> We believe staying organized and being positive during your job search will return the best possible results.</h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> Buy someone coffee, get out talk to people. Get seen be <span style={{ color: 'blue' }}>Heard</span>.</h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> Keep track of what positions you have applied to, use that information for following up.</h2></Page>                   
+                    <Page><h2 style={{ color: 'white' }}> Improve your professional skills, continued learning will make you a better candidate.</h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> We believe organization, positivity and connections, will return the best possible results.</h2></Page>
                 </Slider>
               
             </Wrapper>     
