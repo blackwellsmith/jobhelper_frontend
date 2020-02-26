@@ -46,8 +46,8 @@ const JournalForm = ({ journalFormData, updateJournalForm, journalentry }) => {
                 <div className="form">
                     <input placeholder="What are your goals for tomorrow?" className="form-control input-lg" value={journalFormData.goals} name="goals" type='text' onChange={handleOnChange} required/>
                     </div>
-                    <br></br>
-                <button type="submit" className="btn btn-primary">Make Entry</button>
+                    
+                <button id="btn" type="submit" className="btn btn-primary">Make Entry</button>
             </div> 
             <br></br>
         </form>

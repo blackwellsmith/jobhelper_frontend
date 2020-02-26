@@ -35,7 +35,7 @@ const Signup = ({ signUpData, updateSignUp, signup }) => {
                 <div className="form-small">
                     <input placeholder="password" className="form-control input-lg" value={signUpData.password} name="password" type='text' onChange={handleOnChange} required/>
                 </div>
-                <button type="submit" className="btn btn-primary">Sign up</button>
+                <button id='btn' type="submit" className="btn btn-primary">Sign up</button>
             </div> 
             <br></br>
         </form>

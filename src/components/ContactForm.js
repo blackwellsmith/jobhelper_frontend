@@ -40,8 +40,7 @@ const ContactForm = ({ contactFormData, updateContactForm, newcontact }) => {
                     </div>
                     
                 
-                    <br></br>
-                <button type="submit" className="btn btn-primary">Submit Contact</button>
+                <button id='btn' type="submit" className="btn btn-primary">Submit Contact</button>
             </div> 
             <br></br>
         </form>

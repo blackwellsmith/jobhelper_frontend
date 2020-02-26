@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import { connect } from 'react-redux'
 import { getCurrentUser } from './actions/currentUser.js'
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Navbar from './components/Navbar.js'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NavbarLanding from './components/Navbar.js'
 import NavbarLoggedIn from './components/NavbarLoggedIn.js'
 import Home from './components/Home.js'
 import Job from './components/JobSearchGoalForm.js'
@@ -28,13 +28,25 @@ class App extends React.Component {
     const loggedin = this.props.currentUser
     
     return (
-      <Router>
+
+      <>
+        <NavbarLanding/>
+        <Router>
+          <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/login" component={Login} />
+          </Switch>
+        </Router>
+        </>
+      /*<Router>
         <div className="App">
           
           {loggedin ? (
             <>
-           <Logout /> <h1>Hello {this.props.currentUser.name} </h1>
-            <h2></h2> 
+            <Logout />
+            <h1>Hello {this.props.currentUser.name} </h1>
+            <h2>2</h2> 
             <NavbarLoggedIn />
               <Route exact path="/" component={Home} /> 
               <Route exact path="/journal" component={Journalform} />
@@ -48,16 +60,15 @@ class App extends React.Component {
             
           ) : (
               <>
-            <h1>Heard</h1>
-            <Navbar />
-              <Route exact path="/" component={Home} />
-              <Route exact path="/signup" component={Signup} />
-              <Route exact path="/login" component={Login} />
+              <NavbarLanding />
+                <Route exact path="/" component={Home} />
+                <Route exact path="/signup" component={Signup} />
+                <Route exact path="/login" component={Login} />
             </>
             )}
           
         </div>
-      </Router>
+      </Router>*/
       
       
     );
