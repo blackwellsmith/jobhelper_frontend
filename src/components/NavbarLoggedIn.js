@@ -1,24 +1,53 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux'
 import { Nav, Navbar, NavDropdown, Form } from 'react-bootstrap';
+import Logout from "./Logout.js"
 
 
-const NavbarLoggedIn = () => {
+
+const NavbarLoggedIn = (props) => {
 
     
     
     return (
-        <div style={{ borderBottom: '2px solid black', paddingBottom: '10px', marginBottom: '12px' }}>
-        <NavLink style={{ marginRight: '10px' }} to="/">About </NavLink>
-        <NavLink style={{ marginRight: '10px' }} to="/journal"> Make Journal Entry </NavLink>
-        <NavLink style={{ marginRight: '10px' }} to="/journals"> Daily Journals </NavLink>
-        <NavLink style={{ marginRight: '10px' }} to="/job"> Job Goal </NavLink>
-        <NavLink style={{ marginRight: '10px' }} to="/contacts"> Contacts </NavLink>  
-        <NavLink style={{ marginRight: '10px' }} to="/contact"> Add Contact </NavLink>  
-        </div>
+        <div>
+             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+               <Navbar.Brand href="/">Heard</Navbar.Brand>
+               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+               <Navbar.Collapse id="responsive-navbar-nav">
+               <Nav className="mr-auto">
+               <Nav.Link href="/">Home</Nav.Link>
+               <Nav.Link href="/journals">Daily Journal</Nav.Link>
+               <Nav.Link href="/contacts">Contacts</Nav.Link>        
+               <NavDropdown title="Write" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="/journal">Journal Entry</NavDropdown.Item>
+                <NavDropdown.Item href="/contact">Add Contacts</NavDropdown.Item>
+                <NavDropdown.Item href="/job">Desired Position</NavDropdown.Item>
+                        </NavDropdown>
+                        <Navbar.Text>
+                           <div> Signed in as: {props.currentUser.name}   </div>
+                    </Navbar.Text>       
+               </Nav>
+                    <Nav>
+                    
+                    </Nav>
+                    <Nav>
+               <Form inline>
+               <Logout />
+               </Form>
+               </Nav>
+               </Navbar.Collapse>
+             </Navbar>
+             </div>
+        
     )
 } 
 
+const mapStateToProps = ( state ) => {
+    return {
+      currentUser: state.currentUser,
+      currentJobGoal: state.currentJobGoal
+    }
+  }
 
-
-export default NavbarLoggedIn;
+export default connect(mapStateToProps)(NavbarLoggedIn);
