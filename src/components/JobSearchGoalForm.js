@@ -2,14 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import Card from 'react-bootstrap/Card'
-import { createJobGoal, postJobGoal } from '../actions/jobSearchGoal.js' 
+import { createJobGoal, postJobGoal, updateJobGoal } from '../actions/jobSearchGoal.js' 
 
-const Job = ({ JobGoalFormData, createJobGoal, postJobGoal, currentJobGoal }) => {
+const Job = ({ JobGoalFormData, createJobGoal, postJobGoal, currentJobGoal, updateJobGoal }) => {
     
     const handleOnChange = event => {
         event.preventDefault()
         const { name, value } = event.target
-        console.log(event)
+        
         const jobGoal = {
             ...JobGoalFormData,
             [name]: value
@@ -18,8 +18,9 @@ const Job = ({ JobGoalFormData, createJobGoal, postJobGoal, currentJobGoal }) =>
     }
 
     const handleOnSubmit = event => {
-        event.preventDefault()
-        postJobGoal(JobGoalFormData)
+        //event.preventDefault()
+        (currentJobGoal === []) ? postJobGoal(JobGoalFormData)  :  updateJobGoal(JobGoalFormData, currentJobGoal.id)
+        
         
       
     }
@@ -69,7 +70,11 @@ const Job = ({ JobGoalFormData, createJobGoal, postJobGoal, currentJobGoal }) =>
                     <input placeholder="What is your desired comensation? Recognize your strengths don't sell yourself short..." className="form-control input-lg" value={JobGoalFormData.pay} name="pay" type='text' onChange={handleOnChange} required/>
                 </div>
                     <br></br>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                    {(currentJobGoal === []) ? (
+                        <button type="submit" className="btn btn-primary">Create</button>
+                    ) : (
+                        <button type="submit" className="btn btn-primary">Update</button>  
+                    )}
             </div>   
         </form>
     </div>        
@@ -84,4 +89,4 @@ const mapStateToProps = state => {
     } 
 } 
 
-export default connect(mapStateToProps, { createJobGoal ,postJobGoal })(Job)
+export default connect(mapStateToProps, { createJobGoal ,postJobGoal,  updateJobGoal})(Job)
