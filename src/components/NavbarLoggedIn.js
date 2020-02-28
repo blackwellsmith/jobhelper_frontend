@@ -21,8 +21,8 @@ const NavbarLoggedIn = (props) => {
                <Nav.Link href="/contacts">Contacts </Nav.Link>        
                <NavDropdown title="Write" id="collasible-nav-dropdown">
                <NavDropdown.Item href="/journal">Journal Entry</NavDropdown.Item>
-               <NavDropdown.Item href="/contact">Add Contacts</NavDropdown.Item>
-               <NavDropdown.Item href="/job">Desired Position</NavDropdown.Item>
+               <NavDropdown.Item href="/contact">Add Contact</NavDropdown.Item>
+               <NavDropdown.Item href="/job">Dream job</NavDropdown.Item>
                </NavDropdown>
                <Navbar.Text>
                <div>       Signed in as: {props.currentUser.name}   </div>

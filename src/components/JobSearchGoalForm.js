@@ -24,21 +24,36 @@ const Job = ({ JobGoalFormData, createJobGoal, postJobGoal, currentJobGoal }) =>
       
     }
     return (
-    <div className="JobGoal">
+        <div className="JobGoal">
+            {(currentJobGoal === []) ? (
             <div className="badgecontainer">
                 <Card body bg="secondary" text="white" border="primary">
-                    <Card.Header>Dream job</Card.Header> 
+                    <Card.Header>Dream job</Card.Header>
+                    <Card.Body>
+                        <Card.Title>This is very important.</Card.Title>
+                        <Card.Text>
+                             Please create your Dream Job below.
+                    </Card.Text>
+                    </Card.Body>
+                </Card>   
+            </div>
+                
+            ) : (
+            <div className="badgecontainer">
+                <Card body bg="secondary" text="white" border="primary">
+                    <Card.Header>Dream job</Card.Header>
                     <Card.Body>
                         <Card.Title>Title: {currentJobGoal.name}</Card.Title>
                         <Card.Title>Location: {currentJobGoal.location}</Card.Title>
                         <Card.Title>Compensation: {currentJobGoal.pay}</Card.Title>
                         <Card.Text>
-                               Update your Dream Job below.
-                        </Card.Text>
-                    </Card.Body>    
+                            Update your Dream Job below.
+                    </Card.Text>
+                    </Card.Body>
                 </Card>
-           
-        </div>
+            </div>
+            )
+            }
             
         <form onSubmit={handleOnSubmit}>
             <div className="form-group">
