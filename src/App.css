@@ -80,7 +80,7 @@ html {
   margin-left: 70px;
   margin-right: 70px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .Logout {
@@ -133,7 +133,8 @@ html {
   width: 300px
 }
 .badgecontainer {
-  padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px
   
 }
 
@@ -146,9 +147,12 @@ html {
 }
 
 .card {
-  width: 350px;
+  width: 230px;
   margin: 0 auto; /* Added */
   float: none; /* Added */
-  margin-bottom: 10px; /* Added */
+  margin-bottom: 0px; /* Added */
 }
 
+.popover-positioned-top {
+  padding: 10px
+}

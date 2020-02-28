@@ -4,39 +4,44 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Popover from 'react-bootstrap/Popover'
 import Button from 'react-bootstrap/Button'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
-import Badge from 'react-bootstrap/Badge'
+import Card from 'react-bootstrap/Card'
+import { deleteUserContact } from '../actions/contacts.js'
 
 
-const Contacts = ({ contactsIndex }) => {
+const Contacts = ({ contactsIndex,  deleteUserContact}) => {
+
+
+  const handleClick = id => {
+    //event.preventDefault()
+    console.log(id)
+    deleteUserContact(id)
+  }
+
+
     
     return (
       <div className="ContactsContainer">
         <div className="badgecontainer">
-          <Badge variant="secondary"><h3>Your Contacts</h3></Badge>
+          <Card body bg="secondary" text="white" border="primary">
+            {(contactsIndex === []) ? <Card.Header>Please add contacts in write</Card.Header> : <Card.Header>Contacts</Card.Header>  }
+          </Card>
+          
             </div>
               <ButtonToolbar className="bt">
                 {contactsIndex.sort((a, b) => a.name.localeCompare(b.name)).map(contact => (
-                
-                  <OverlayTrigger
-                  trigger="click"
-                  key={contact.id}
-                  placement='top'
-                  overlay={
-                    <Popover id='popover-positioned-top'>
-                      <Popover.Title as="h3"><strong>Name: </strong>{contact.name}</Popover.Title>
-                      <Popover.Content>
-                        <strong>Company: </strong> {contact.company}
-                        <strong> - Position: </strong> {contact.position}
-                        <strong> - Contact info: </strong> {contact.contact_info}               
-                      </Popover.Content>
-                    </Popover>
-                  }>
-                    <Button className='button' variant="primary">{contact.name}</Button>
-                        
-                  </OverlayTrigger>
-                    
-                    
-              ))}
+                  <div>
+                    <Card style={{ width: '18rem' }}>
+                      <Card.Body>
+                        <Card.Title>{contact.name}</Card.Title>
+                        <Card.Subtitle className="mb-2 text-muted">Position: {contact.position}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Company: {contact.company}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted">Contact information: {contact.contact_info}</Card.Subtitle>
+                        <Button onClick={handleClick(contact.id)} key={contact.id} variant="secondary">Delete</Button>
+                        </Card.Body>
+                      </Card>
+
+                  </div>
+             ))}
             
             </ButtonToolbar> 
         </div>
@@ -49,4 +54,4 @@ const mapStateToProps = state => {
     } 
 }
 
-export default connect(mapStateToProps)(Contacts)
+export default connect(mapStateToProps,{deleteUserContact} )(Contacts)

@@ -12,9 +12,9 @@ export const clearCurrentJobGoal = () => {
 }
 
 export const jobGoal = credentials => {
-    console.log("wtf", credentials)
+    
     return dispatch => {
-        console.log("credentials")
+        
         return fetch("http://localhost:3000/jobs", {
             credentials: "include",
             method: "GET",
@@ -29,7 +29,7 @@ export const jobGoal = credentials => {
                     alert(job.error)
                 } else {
                     dispatch(setCurrentJobGoal(job)) 
-                    console.log(job)
+                    
                 }
             })
         .catch(console.log)
