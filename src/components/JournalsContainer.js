@@ -10,7 +10,9 @@ const Journals = ({ journalIndex }) => {
     
     return (
         <div className="JournalsContainer">
-            <h2 ><Badge variant="primary">Your Journal Entries</Badge></h2>
+          <div className="badgecontainer">
+            <Badge variant="secondary"><h3>Journal</h3></Badge>
+              </div>
               <ButtonToolbar className="bt">
                 {journalIndex.map(journal => (
                 

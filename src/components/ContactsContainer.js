@@ -10,8 +10,10 @@ import Badge from 'react-bootstrap/Badge'
 const Contacts = ({ contactsIndex }) => {
     
     return (
-        <div className="ContactsContainer">
-            <h2 ><Badge variant="primary">Your Contacts</Badge></h2>
+      <div className="ContactsContainer">
+        <div className="badgecontainer">
+          <Badge variant="secondary"><h3>Your Contacts</h3></Badge>
+            </div>
               <ButtonToolbar className="bt">
                 {contactsIndex.sort((a, b) => a.name.localeCompare(b.name)).map(contact => (
                 
