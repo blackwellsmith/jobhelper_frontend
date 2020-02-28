@@ -1,9 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import Card from 'react-bootstrap/Card'
 import { createJobGoal, postJobGoal } from '../actions/jobSearchGoal.js' 
 
-const Job = ({ JobGoalFormData, createJobGoal, postJobGoal }) => {
+const Job = ({ JobGoalFormData, createJobGoal, postJobGoal, currentJobGoal }) => {
     
     const handleOnChange = event => {
         event.preventDefault()
@@ -23,8 +24,22 @@ const Job = ({ JobGoalFormData, createJobGoal, postJobGoal }) => {
       
     }
     return (
-        <div className="JobGoal">
-            <br></br>
+    <div className="JobGoal">
+            <div className="badgecontainer">
+                <Card body bg="secondary" text="white" border="primary">
+                    <Card.Header>Dream job</Card.Header> 
+                    <Card.Body>
+                        <Card.Title>Title: {currentJobGoal.name}</Card.Title>
+                        <Card.Title>Location: {currentJobGoal.location}</Card.Title>
+                        <Card.Title>Compensation: {currentJobGoal.pay}</Card.Title>
+                        <Card.Text>
+                               Update your Dream Job below.
+                        </Card.Text>
+                    </Card.Body>    
+                </Card>
+           
+        </div>
+            
         <form onSubmit={handleOnSubmit}>
             <div className="form-group">
                 <div className="form-small">
@@ -49,7 +64,8 @@ const Job = ({ JobGoalFormData, createJobGoal, postJobGoal }) => {
 const mapStateToProps = state => {
     return {
         
-        JobGoalFormData: state.jobSearchGoal
+        JobGoalFormData: state.jobSearchGoal,
+        currentJobGoal: state.currentJobGoal
     } 
 } 
 

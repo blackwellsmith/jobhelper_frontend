@@ -79,8 +79,8 @@ html {
 .form-small {
   margin-left: 70px;
   margin-right: 70px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .Logout {
@@ -126,12 +126,29 @@ html {
 
 .badge {
   padding: 45px;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-right: 10px;
   margin-bottom: 10px;
   height: 120px;
   width: 300px
 }
 .badgecontainer {
-  padding: 35px
+  padding: 70px;
+  
 }
+
+.badgetwo {
+  margin-left: 20px;
+  margin-right: 10px;
+  height: 170px;
+  width: 400px;
+  text-align: center;
+}
+
+.card {
+  width: 300px;
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}
+
