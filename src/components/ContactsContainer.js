@@ -1,7 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
-import Popover from 'react-bootstrap/Popover'
 import Button from 'react-bootstrap/Button'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import Card from 'react-bootstrap/Card'
@@ -12,9 +10,8 @@ const Contacts = ({ contactsIndex,  deleteUserContact}) => {
 
 
   const handleClick = id => {
-    //event.preventDefault()
-    console.log(id)
-    deleteUserContact(id)
+    
+    deleteUserContact()
   }
 
 
@@ -26,25 +23,25 @@ const Contacts = ({ contactsIndex,  deleteUserContact}) => {
             {(contactsIndex === []) ? <Card.Header>Please add contacts in write</Card.Header> : <Card.Header>Contacts</Card.Header>  }
           </Card>
           
-            </div>
+           </div >
               <ButtonToolbar className="bt">
                 {contactsIndex.sort((a, b) => a.name.localeCompare(b.name)).map(contact => (
-                  <div>
+                  <div key={contact.id}>
                     <Card style={{ width: '18rem' }}>
                       <Card.Body>
                         <Card.Title>{contact.name}</Card.Title>
-                        <Card.Subtitle className="mb-2 text-muted">Position: {contact.position}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">Company: {contact.company}</Card.Subtitle>
-                        <Card.Subtitle className="mb-2 text-muted">Contact information: {contact.contact_info}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><strong>Position: </strong>{contact.position}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><strong>Company: </strong>{contact.company}</Card.Subtitle>
+                        <Card.Subtitle className="mb-2 text-muted"><strong>Contact information: </strong>{contact.contact_info}</Card.Subtitle>
                         <Button onClick={handleClick(contact.id)} key={contact.id} variant="secondary">Delete</Button>
                         </Card.Body>
                       </Card>
 
                   </div>
-             ))}
+               ))}
             
-            </ButtonToolbar> 
-        </div>
+              </ButtonToolbar> 
+            </div>
     )
 }
 

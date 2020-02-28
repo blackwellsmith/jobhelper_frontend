@@ -16,7 +16,7 @@ const Job = ({ JobGoalFormData, createJobGoal, postJobGoal, currentJobGoal, upda
         createJobGoal(jobGoal)
     }
 
-    const handleOnSubmit = event => {
+    const handleOnSubmit = () => {
         //event.preventDefault()
         (currentJobGoal === []) ? postJobGoal(JobGoalFormData)  :  updateJobGoal(JobGoalFormData, currentJobGoal.id)
         

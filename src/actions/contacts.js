@@ -7,11 +7,12 @@ export const setUserContacts = index => {
 
 export const deleteUserContact = (id) => {
     return (dispatch) => {
-        
+           
         return fetch(`http://localhost:3000/contacts/${id}`, {
             credentials: 'include',
             method:"DELETE"
         })
+        //dispatch(contactsindex())
     }
 }
 
