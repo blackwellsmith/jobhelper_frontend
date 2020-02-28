@@ -1,20 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Button from 'react-bootstrap/Button'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import Card from 'react-bootstrap/Card'
-import { deleteUserContact } from '../actions/contacts.js'
 
 
-const Contacts = ({ contactsIndex,  deleteUserContact}) => {
+const Contacts = ({ contactsIndex}) => {
 
 
-  const handleClick = id => {
-    
-    deleteUserContact()
-  }
-
-
+  
     
     return (
       <div className="ContactsContainer">
@@ -27,13 +20,12 @@ const Contacts = ({ contactsIndex,  deleteUserContact}) => {
               <ButtonToolbar className="bt">
                 {contactsIndex.sort((a, b) => a.name.localeCompare(b.name)).map(contact => (
                   <div key={contact.id}>
-                    <Card style={{ width: '18rem' }}>
+                    <Card style={{ width: '18rem' }} className="index">
+                    <Card.Header>{contact.name}</Card.Header>
                       <Card.Body>
-                        <Card.Title>{contact.name}</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted"><strong>Position: </strong>{contact.position}</Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted"><strong>Company: </strong>{contact.company}</Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted"><strong>Contact information: </strong>{contact.contact_info}</Card.Subtitle>
-                        <Button onClick={handleClick(contact.id)} key={contact.id} variant="secondary">Delete</Button>
                         </Card.Body>
                       </Card>
 
@@ -51,4 +43,4 @@ const mapStateToProps = state => {
     } 
 }
 
-export default connect(mapStateToProps,{deleteUserContact} )(Contacts)
+export default connect(mapStateToProps)(Contacts)
