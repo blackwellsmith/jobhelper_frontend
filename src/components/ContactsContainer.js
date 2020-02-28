@@ -26,6 +26,7 @@ const Contacts = ({ contactsIndex}) => {
                         <Card.Subtitle className="mb-2 text-muted"><strong>Position: </strong>{contact.position}</Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted"><strong>Company: </strong>{contact.company}</Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted"><strong>Contact information: </strong>{contact.contact_info}</Card.Subtitle>
+                        <Card.Link href="">update or remove contact</Card.Link>
                         </Card.Body>
                       </Card>
 
