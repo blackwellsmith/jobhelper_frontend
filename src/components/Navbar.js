@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 
 
 
@@ -14,10 +14,10 @@ const NavbarLanding = () => {
                <Nav className="mr-auto">
                <Nav.Link href="/">Home</Nav.Link>
                <Nav.Link href="/login">Login</Nav.Link>
-               <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-               <NavDropdown.Item href="/signup">Signup</NavDropdown.Item>
+               <Nav.Link href="/signup">Signup</Nav.Link>
+               
         
-               </NavDropdown>
+               
                </Nav>
                
                </Navbar.Collapse>

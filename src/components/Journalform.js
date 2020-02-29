@@ -7,7 +7,6 @@ const JournalForm = ({ journalFormData, updateJournalForm, journalentry }) => {
     const handleOnChange = event => {
         event.preventDefault()
         const { name, value } = event.target
-        console.log(event.target)
         const updatedJournalForm = {
             ...journalFormData,
             [name]: value

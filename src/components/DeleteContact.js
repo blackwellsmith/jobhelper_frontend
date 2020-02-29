@@ -4,9 +4,7 @@ import { deleteUserContact } from '../actions/contacts.js'
 const DeleteContact = ({deleteUserContact, contact}) =>  {
     
         const handleClick = (contact) => {
-            console.log(contact)
             deleteUserContact(contact)
-            //deleteContact(contact)
         }
     
         return (

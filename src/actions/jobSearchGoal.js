@@ -9,9 +9,7 @@ export const createJobGoal = (formData) => {
  
  
 export const postJobGoal = credentials => {
-    
     return dispatch => {
-        
         return fetch("http://localhost:3000/jobs", {
             credentials: "include",
             method: "POST",
@@ -33,9 +31,7 @@ export const postJobGoal = credentials => {
 }
 
 export const updateJobGoal = (credentials, jobId) => {
-    
     return dispatch => {
-        console.log("updating job goal")
         return fetch(`http://localhost:3000/jobs/${jobId}`, {
             credentials: "include",
             method: "PATCH",

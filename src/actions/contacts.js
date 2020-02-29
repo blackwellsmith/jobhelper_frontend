@@ -13,7 +13,7 @@ export const addContact = contact => {
 }
 
 export const deleteContact = contact => {
-    console.log("in delete", contact)
+    
     return {
         type: "DELETE_CONTACT",
         contact
@@ -21,7 +21,7 @@ export const deleteContact = contact => {
 }
 
 export function deleteUserContact(id) {
-    console.log("in the delete fetch", id)
+    
     return dispatch => { dispatch(deleteContact(id))
         return fetch(`http://localhost:3000/contacts/${id}`, {
             method: "DELETE",

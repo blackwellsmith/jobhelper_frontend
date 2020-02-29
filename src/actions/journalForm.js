@@ -10,7 +10,6 @@ export const updateJournalForm = (formData) => {
 
 
 export const journalentry = credentials => {
-    console.log("wtf", credentials)
     return dispatch => {
         return fetch("http://localhost:3000/journalentry", {
             credentials: "include",
