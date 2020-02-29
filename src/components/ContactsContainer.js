@@ -21,7 +21,7 @@ const Contacts = ({ contactsIndex}) => {
           {console.log(contactsIndex)}
                 {contactsIndex.sort((a, b) => a.name.localeCompare(b.name)).map(contact => (
                   <div key={contact.id}>
-                    <Card style={{ width: '18rem' }} className="index">
+                    <Card key={contact.id} style={{ width: '18rem' }} className="index">
                     <Card.Header>{contact.name}</Card.Header>
                       <Card.Body>
                         <Card.Subtitle className="mb-2 text-muted"><strong>Position: </strong>{contact.position}</Card.Subtitle>

@@ -2,7 +2,8 @@ const initialState = {
     name: "",
     company: "",
     position: "",
-    contact_info: ""
+    contact_info: "",
+    key: ""
 }
 
 export default (state = initialState, action) => {
