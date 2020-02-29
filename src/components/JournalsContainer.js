@@ -4,6 +4,8 @@ import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import Card from 'react-bootstrap/Card'
 
 const Journals = ({ journalIndex }) => {
+
+  
     
     return (
         <div className="JournalsContainer">
@@ -12,10 +14,11 @@ const Journals = ({ journalIndex }) => {
                {(journalIndex === []) ? <Card.Header>You have no journal entries left</Card.Header> : <Card.Header>Journal</Card.Header>  }
             </Card>
               </div>
-              <ButtonToolbar className="bt">
+                <ButtonToolbar className="bt">
+                 {console.log(journalIndex)}
                 {journalIndex.map(journal => (
                    
-                   <Card className="index" style={{ width: '18rem' }} border="primary">
+                  <Card key={journal.id} className="index" style={{ width: '18rem' }} border="primary">
                      <Card.Header>Date: {journal.created_at.substring(5, 7)}/{journal.created_at.substring(8, 10)}/{journal.created_at.substring(0, 4)}</Card.Header>
                      <Card.Body>
                        <Card.Subtitle className="mb-2 text-muted"><strong>Notes: </strong>{journal.entry}</Card.Subtitle>

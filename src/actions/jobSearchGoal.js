@@ -9,9 +9,9 @@ export const createJobGoal = (formData) => {
  
  
 export const postJobGoal = credentials => {
-    console.log("wtf", credentials)
+    
     return dispatch => {
-        console.log("you")
+        
         return fetch("http://localhost:3000/jobs", {
             credentials: "include",
             method: "POST",
@@ -33,7 +33,7 @@ export const postJobGoal = credentials => {
 }
 
 export const updateJobGoal = (credentials, jobId) => {
-    console.log("wtf", credentials, jobId)
+    
     return dispatch => {
         console.log("updating job goal")
         return fetch(`http://localhost:3000/jobs/${jobId}`, {

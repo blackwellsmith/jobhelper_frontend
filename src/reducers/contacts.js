@@ -7,8 +7,11 @@ export default (state = initialState, action) => {
         case "ADD_CONTACT":
             return [...state, action.contact]
         case "DELETE_CONTACT":
-            const contacts = state.contacts.filter(c => c.id !== action.contact.id)
-            return {...state, contacts}
+            console.log(action.contact)
+            console.log([...state])
+            console.log([ ...state.filter(contact => contact.id !== action.contact)])
+            //const contacts = 
+            return [ ...state.filter(contact => contact.id !== action.contact)]
         default:
           return state
     }

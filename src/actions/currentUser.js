@@ -30,7 +30,7 @@ export const login = credentials => {
                     dispatch(setCurrentUser(user)) 
                     dispatch(journalindex(user))
                     dispatch(jobGoal(user))
-                    
+                    dispatch(contactsindex())
                 }
             })
         .catch(console.log)
@@ -50,7 +50,9 @@ export const logout = () => {
 
 export const getCurrentUser = () => {
     return dispatch => {
-        //dispatch(jobGoal())
+        dispatch(jobGoal())
+        dispatch(contactsindex())
+        dispatch(journalindex())
         return fetch("http://localhost:3000/get_current_user", {
             credentials: "include",
             method: "GET",
@@ -64,10 +66,10 @@ export const getCurrentUser = () => {
                 if (user.error) {
                     alert(user.error)
                 } else {
-                    dispatch(jobGoal())
+                    //dispatch(jobGoal())
                     dispatch(setCurrentUser(user)) 
-                    dispatch(journalindex(user))
-                    dispatch(contactsindex())
+                    //dispatch(journalindex(user))
+                    //dispatch(contactsindex())
                 }
             })
         .catch(console.log)

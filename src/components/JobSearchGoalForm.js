@@ -25,6 +25,7 @@ const Job = ({ JobGoalFormData, createJobGoal, postJobGoal, currentJobGoal, upda
     }
     return (
         <div className="JobGoal">
+            {console.log(currentJobGoal)}
             {(currentJobGoal === []) ? (
             <div className="badgecontainer">
                 <Card body bg="secondary" text="white" border="primary">

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { connect } from 'react-redux'
-import { getCurrentUser } from './actions/currentUser.js'
+import { getCurrentUser, setCurrentUser } from './actions/currentUser.js'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavbarLanding from './components/Navbar.js'
 import NavbarLoggedIn from './components/NavbarLoggedIn.js'
@@ -19,9 +19,10 @@ import ContactForm from "./components/ContactForm.js"
 class App extends React.Component {
 
   componentDidMount() {
-    this.props.getCurrentUser()
+   this.props.getCurrentUser()  
+    
    
-  }
+ }
 
   render() {
     const loggedin = this.props.currentUser
@@ -73,4 +74,4 @@ const mapStateToProps = ( state ) => {
 }
 
 
-export default connect(mapStateToProps, { getCurrentUser })(App);
+export default connect(mapStateToProps, { getCurrentUser, setCurrentUser })(App);

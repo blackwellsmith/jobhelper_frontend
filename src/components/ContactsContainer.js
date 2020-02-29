@@ -1,16 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
-import Button from 'react-bootstrap/Button'
+import DeleteContact from './DeleteContact.js'
 import Card from 'react-bootstrap/Card'
 
 
 const Contacts = ({ contactsIndex}) => {
 
-  const handleClick = (id) => {
-    
-      console.log(id)
-}
   
     
     return (
@@ -21,7 +17,8 @@ const Contacts = ({ contactsIndex}) => {
           </Card>
           
            </div >
-              <ButtonToolbar className="bt">
+        <ButtonToolbar className="bt">
+          {console.log(contactsIndex)}
                 {contactsIndex.sort((a, b) => a.name.localeCompare(b.name)).map(contact => (
                   <div key={contact.id}>
                     <Card style={{ width: '18rem' }} className="index">
@@ -30,7 +27,7 @@ const Contacts = ({ contactsIndex}) => {
                         <Card.Subtitle className="mb-2 text-muted"><strong>Position: </strong>{contact.position}</Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted"><strong>Company: </strong>{contact.company}</Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted"><strong>Contact information: </strong>{contact.contact_info}</Card.Subtitle>
-                        <Button onClick={handleClick(contact.id)} type="button" variant="secondary" size="sm">remove contact</Button>
+                        <DeleteContact contact={contact.id}/>  
                         </Card.Body>
                       </Card>
 

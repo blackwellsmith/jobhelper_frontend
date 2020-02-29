@@ -18,9 +18,7 @@ const JournalForm = ({ journalFormData, updateJournalForm, journalentry }) => {
     const handleOnSubmit = event => {
         event.preventDefault()
         journalentry(journalFormData)
-        //login(loginFormData)
         
-        //loginFormData.reset() 
     }
     return (
         <div className="JournalForm"> 
