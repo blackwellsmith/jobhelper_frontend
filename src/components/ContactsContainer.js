@@ -18,9 +18,9 @@ const Contacts = ({ contactsIndex}) => {
           
            </div >
         <ButtonToolbar className="bt">
-          {console.log(contactsIndex)}
+          
                 {contactsIndex.sort((a, b) => a.name.localeCompare(b.name)).map(contact => (
-                  <div key={contact.id}>
+                  <div >
                     <Card key={contact.id} style={{ width: '18rem' }} className="index">
                     <Card.Header>{contact.name}</Card.Header>
                       <Card.Body>
