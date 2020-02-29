@@ -1,12 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
+import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 
 
 const Contacts = ({ contactsIndex}) => {
 
-
+  const handleClick = (id) => {
+  
+}
   
     
     return (
@@ -26,7 +29,7 @@ const Contacts = ({ contactsIndex}) => {
                         <Card.Subtitle className="mb-2 text-muted"><strong>Position: </strong>{contact.position}</Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted"><strong>Company: </strong>{contact.company}</Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted"><strong>Contact information: </strong>{contact.contact_info}</Card.Subtitle>
-                        <Card.Link href="">update or remove contact</Card.Link>
+                        <Button onClick={handleClick(contact.id)} variant="secondary" size="sm">remove contact</Button>
                         </Card.Body>
                       </Card>
 

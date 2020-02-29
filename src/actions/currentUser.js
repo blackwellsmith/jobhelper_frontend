@@ -9,7 +9,7 @@ export const setCurrentUser = user => {
         user
 
     }
-}
+} 
  
 export const login = credentials => {
     console.log("wtf", credentials)

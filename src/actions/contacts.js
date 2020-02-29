@@ -5,8 +5,16 @@ export const setUserContacts = index => {
     }
 }
 
+export const addContact = contact => {
+    console.log(contact)
+    return {
+        type: "ADD_CONTACT",
+        contact
+    }
+}
+
 export const deleteUserContact = (id) => {
-    return (dispatch) => {
+    return () => {
            
         return fetch(`http://localhost:3000/contacts/${id}`, {
             credentials: 'include',
@@ -32,7 +40,7 @@ export const contactsindex = () => {
                 if (contacts.error) {
                     alert(contacts.error)
                 } else {
-                    //console.log(contacts)
+                    
                     dispatch(setUserContacts(contacts)) 
                 }
             })
