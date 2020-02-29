@@ -6,21 +6,27 @@ export const setUserContacts = index => {
 }
 
 export const addContact = contact => {
-    console.log(contact)
     return {
         type: "ADD_CONTACT",
         contact
     }
 }
 
+export const deleteContact = contact => {
+    return {
+        type: "DELETE_CONTACT",
+        contact
+    }
+}
+
 export const deleteUserContact = (id) => {
-    return () => {
+    return (dispatch) => {
            
         return fetch(`http://localhost:3000/contacts/${id}`, {
             credentials: 'include',
             method:"DELETE"
         })
-        //dispatch(contactsindex())
+        
     }
 }
 

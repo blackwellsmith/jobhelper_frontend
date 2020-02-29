@@ -5,11 +5,10 @@ export default (state = initialState, action) => {
         case "SET_USER_CONTACTS":
             return action.index
         case "ADD_CONTACT":
-            
-            return [...state, action.contact ]
-            
-                  
-            
+            return [...state, action.contact]
+        case "DELETE_CONTACT":
+            const contacts = state.contacts.filter(c => c.id !== action.contact.id)
+            return {...state, contacts}
         default:
           return state
     }

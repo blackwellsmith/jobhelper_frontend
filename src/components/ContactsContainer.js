@@ -8,7 +8,8 @@ import Card from 'react-bootstrap/Card'
 const Contacts = ({ contactsIndex}) => {
 
   const handleClick = (id) => {
-  
+    
+      console.log(id)
 }
   
     
@@ -29,7 +30,7 @@ const Contacts = ({ contactsIndex}) => {
                         <Card.Subtitle className="mb-2 text-muted"><strong>Position: </strong>{contact.position}</Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted"><strong>Company: </strong>{contact.company}</Card.Subtitle>
                         <Card.Subtitle className="mb-2 text-muted"><strong>Contact information: </strong>{contact.contact_info}</Card.Subtitle>
-                        <Button onClick={handleClick(contact.id)} variant="secondary" size="sm">remove contact</Button>
+                        <Button onClick={handleClick(contact.id)} type="button" variant="secondary" size="sm">remove contact</Button>
                         </Card.Body>
                       </Card>
 
