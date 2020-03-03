@@ -50,7 +50,7 @@ export const logout = () => {
 
 export const getCurrentUser = () => {
     return dispatch => {
-        
+                   dispatch(jobGoal())
         return fetch("http://localhost:3000/get_current_user", {
             credentials: "include",
             method: "GET",

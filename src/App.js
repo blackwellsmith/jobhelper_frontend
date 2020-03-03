@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { connect } from 'react-redux'
 import { getCurrentUser, setCurrentUser } from './actions/currentUser.js'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import NavbarLanding from './components/Navbar.js'
 import NavbarLoggedIn from './components/NavbarLoggedIn.js'
 import Home from './components/Home.js'
@@ -19,10 +19,10 @@ import ContactForm from "./components/ContactForm.js"
 class App extends React.Component {
 
   componentDidMount() {
-   this.props.getCurrentUser()  
     
-   
- }
+      this.props.getCurrentUser()
+    
+  }
 
   render() {
     const loggedin = this.props.currentUser

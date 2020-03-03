@@ -1,84 +1,88 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Card from 'react-bootstrap/Card'
+import { getCurrentUser } from '../actions/currentUser.js'
 import { createJobGoal, postJobGoal, updateJobGoal } from '../actions/jobSearchGoal.js' 
+import  JobCardWithGoal from './JobCardWithGoal.js'
+class Job extends React.Component {
 
-const Job = ({ JobGoalFormData, createJobGoal, postJobGoal, currentJobGoal, updateJobGoal }) => {
-    
-    const handleOnChange = event => {
+    componentDidMount() {
+       this.props.getCurrentUser()
+    }
+
+
+    handleOnChange = (event) => {
+        console.log(event)
         event.preventDefault()
         const { name, value } = event.target
-        
+        console.log(event)
         const jobGoal = {
-            ...JobGoalFormData,
+            ...this.props.JobGoalFormData,
             [name]: value
         }
-        createJobGoal(jobGoal)
+        this.props.createJobGoal(jobGoal)
     }
 
-    const handleOnSubmit = () => {
-        (currentJobGoal === []) ? postJobGoal(JobGoalFormData)  :  updateJobGoal(JobGoalFormData, currentJobGoal.id)
+    handleOnSubmit = () => {
+    
+        (this.props.currentJobGoal === []) ? postJobGoal(this.props.JobGoalFormData) : updateJobGoal(this.props.JobGoalFormData, this.props.currentJobGoal.id)
+    }
+
+    render() {
         
+    
         
       
-    }
-    return (
-        <div className="JobGoal">
-            {console.log(currentJobGoal)}
-            {(currentJobGoal === []) ? (
-            <div className="badgecontainer">
-                <Card body bg="secondary" text="white" border="primary">
-                    <Card.Header>Dream job</Card.Header>
-                    <Card.Body>
-                        <Card.Title>This is very important.</Card.Title>
-                        <Card.Text>
-                             Please create your Dream Job below.
-                    </Card.Text>
-                    </Card.Body>
-                </Card>   
-            </div>
+        
+        return (
+            <div className="JobGoal">
+                {console.log(this.props.currentJobGoal)}
+                {(this.props.currentJobGoal !== []) ? (
+                    <JobCardWithGoal currentJobGoal={this.props.currentJobGoal}/>
+                    
+
+           
                 
-            ) : (
-            <div className="badgecontainer">
-                <Card body bg="secondary" text="white" border="primary">
-                    <Card.Header>Dream job</Card.Header>
-                    <Card.Body>
-                        <Card.Title>Title: {currentJobGoal.name}</Card.Title>
-                        <Card.Title>Location: {currentJobGoal.location}</Card.Title>
-                        <Card.Title>Compensation: {currentJobGoal.pay}</Card.Title>
-                        <Card.Text>
-                            Update your Dream Job below.
-                    </Card.Text>
-                    </Card.Body>
-                </Card>
-            </div>
-            )
-            }
+                ) : (
+                        <div className="badgecontainer">
+                            <Card body bg="secondary" text="white" border="primary">
+                                <Card.Header>Dream job</Card.Header>
+                                <Card.Body>
+                                    <Card.Title>This is very important.</Card.Title>
+                                    <Card.Text>
+                                        Please create your Dream Job below.
+                        </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </div>
+                    )
+                }
             
-        <form onSubmit={handleOnSubmit}>
-            <div className="form-group">
-                <div className="form-small">
-                    <input placeholder="Job goal description" className="form-control input-lg" value={JobGoalFormData.name} name="name" type='text' onChange={handleOnChange} required/>
-                </div>
+                <form onSubmit={this.props.handleOnSubmit}>
+                    <div className="form-group">
+                        <div className="form-small">
+                            <input placeholder="Job goal description" className="form-control input-lg" defaultValue={this.props.JobGoalFormData.name} name="name" type='text' onChange={() => this.props.handleOnChange} required />
+                        </div>
                     
-                <div className="form-small">
-                    <input placeholder="Location of job: Dallas, Chattanooga, Remote, abroad...." className="form-control input-lg" value={JobGoalFormData.location} name="location" type='text' onChange={handleOnChange} required/>
+                        <div className="form-small">
+                            <input placeholder="Location of job: Dallas, Chattanooga, Remote, abroad...." className="form-control input-lg"defaultValue={this.props.JobGoalFormData.location} name="location" type='text' onChange={this.props.handleOnChange} required />
+                        </div>
+                    
+                        <div className="form-small">
+                            <input placeholder="What is your desired compensation? Recognize your strengths don't sell yourself short..." className="form-control input-lg" defaultValue={this.props.JobGoalFormData.pay} name="pay" type='text' onChange={this.props.handleOnChange} required />
+                        </div>
+                    
+                        {(this.props.currentJobGoal === []) ? (
+                            <button type="submit" className="btn btn-primary">Update</button>
+                        ) : (
+                                <button type="submit" className="btn btn-primary">Create</button>
+                            )}
                     </div>
-                    
-                <div className="form-small">
-                    <input placeholder="What is your desired comensation? Recognize your strengths don't sell yourself short..." className="form-control input-lg" value={JobGoalFormData.pay} name="pay" type='text' onChange={handleOnChange} required/>
-                </div>
-                    
-                    {(currentJobGoal === []) ? (
-                        <button type="submit" className="btn btn-primary">Create</button>
-                    ) : (
-                        <button type="submit" className="btn btn-primary">Update</button>  
-                    )}
-            </div>   
-        </form>
-    </div>        
+                </form>
+            </div>
             
-    )
+        )
+    }
 }
 const mapStateToProps = state => {
     return {
@@ -88,4 +92,4 @@ const mapStateToProps = state => {
     } 
 } 
 
-export default connect(mapStateToProps, { createJobGoal ,postJobGoal,  updateJobGoal})(Job)
+export default connect(mapStateToProps, { createJobGoal ,postJobGoal,  updateJobGoal, getCurrentUser})(Job)

@@ -29,7 +29,7 @@ const Signup = ({ signUpData, updateSignUp, signup }) => {
                 </div>
                     <br></br>
                 <div className="form-small">
-                    <input placeholder="email" className="form-control input-lg" value={signUpData.email} name="email" type='text' onChange={handleOnChange} required/>
+                    <input placeholder="we will never share your email" className="form-control input-lg" id="validationServer01"  value={signUpData.email} name="email" type='text' onChange={handleOnChange} required />
                 </div>
                     <br></br>    
                 <div className="form-small">

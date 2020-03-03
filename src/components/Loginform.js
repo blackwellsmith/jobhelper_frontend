@@ -8,7 +8,6 @@ const Login = ({ loginFormData, updateLoginForm, login }) => {
     const handleOnChange = event => {
         event.preventDefault()
         const { name, value } = event.target
-        console.log(event)
         const updatedLogin = {
             ...loginFormData,
             [name]: value
@@ -45,4 +44,4 @@ const mapStateToProps = state => {
     } 
 } 
 
-export default connect(mapStateToProps, { updateLoginForm, login })(Login)
+export default connect(mapStateToProps, { updateLoginForm, login })(Login) 

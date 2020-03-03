@@ -1,4 +1,5 @@
 export const setCurrentJobGoal = goal => {
+    console.log("in set goal")
     return {
         type: "SET_CURRENT_JOB_GOAL",
         goal
@@ -11,7 +12,7 @@ export const clearCurrentJobGoal = () => {
     }
 }
 
-export const jobGoal = credentials => {
+export const jobGoal = () => {
     return dispatch => {
         return fetch("http://localhost:3000/jobs", {
             credentials: "include",
@@ -23,9 +24,14 @@ export const jobGoal = credentials => {
         })
             .then(r => r.json())
             .then(job => {
-                if (job.error) {
-                    alert(job.error)
+                if (job === null) {
+                    //console.log(job)
+                    return []
+                    
+                    //debugger
+                    //alert(job.error)
                 } else {
+                    console.log(job)
                     dispatch(setCurrentJobGoal(job)) 
                     
                 }
