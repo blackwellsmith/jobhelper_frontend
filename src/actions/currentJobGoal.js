@@ -26,7 +26,7 @@ export const jobGoal = () => {
             .then(job => {
                 if (job === null) {
                     //console.log(job)
-                    return []
+                    return null
                     
                     //debugger
                     //alert(job.error)

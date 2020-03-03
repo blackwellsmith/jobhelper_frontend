@@ -36,7 +36,7 @@ export const postJobGoal = credentials => {
 
 export const updateJobGoal = (credentials, jobId) => {
     console.log("updating that shit")
-    debugger
+    //debugger
     return dispatch => {
         return fetch(`http://localhost:3000/jobs/${jobId}`, {
             credentials: "include",

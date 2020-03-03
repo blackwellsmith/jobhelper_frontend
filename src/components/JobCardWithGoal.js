@@ -2,7 +2,7 @@ import React from "react"
 import Card from 'react-bootstrap/Card'
 
 const JobCardWithGoal = (props) => {
-    //{console.log(props.currentJobGoal)}
+    {console.log(props.currentJobGoal)}
     return (
        
                     <div className="badgecontainer">

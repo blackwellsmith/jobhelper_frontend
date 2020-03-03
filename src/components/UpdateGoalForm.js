@@ -2,7 +2,7 @@ import React from "react"
 import { createJobGoal, updateJobGoal } from '../actions/jobSearchGoal.js'
 import { connect } from 'react-redux'
 
-const UpdateGoalForm = ({ createJobGoal ,updateJobGoal,  JobGoalFormData}, props) => {
+const UpdateGoalForm = ({ createJobGoal ,updateJobGoal,  JobGoalFormData, currentJobGoal}) => {
      
     const handleOnChange = (event) => {
         event.preventDefault()
@@ -14,8 +14,11 @@ const UpdateGoalForm = ({ createJobGoal ,updateJobGoal,  JobGoalFormData}, props
         createJobGoal(jobGoal)
     }
 
-    const handleOnSubmit = () => {
-        updateJobGoal(JobGoalFormData, this.props.currentJobGoal.id) 
+    const handleOnSubmit = (event) => {
+        event.preventDefault()
+        //console.log(JobGoalFormData, currentJobGoal.id)
+        //debugger // 
+        updateJobGoal(JobGoalFormData, currentJobGoal.id) 
     }
 
 

@@ -1,4 +1,4 @@
-const initialstate = []
+const initialstate = null
 
 export default (state = initialstate , action) => {
     switch (action.type) {

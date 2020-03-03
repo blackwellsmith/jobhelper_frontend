@@ -15,12 +15,18 @@ class Job extends React.Component {
      }
 
     render() {
+         
         return (
             <>
-            <div className="JobGoal">
+                <div className="JobGoal">
                 {console.log(this.props.currentJobGoal)}
-                    {(this.props.currentJobGoal !== []) ? ( <div> <JobCardWithGoal currentJobGoal={this.props.currentJobGoal} /> <UpdateGoalForm /></div>) : (<div> <JobCardNoGoal /><GoalForm currentJobGoal={this.props.currentJobGoal} /></div> )}
-                
+                    { this.props.currentJobGoal === null ? (<div><JobCardNoGoal /><GoalForm /> </div>
+                    
+                    ) : (<div>
+                        <JobCardWithGoal currentJobGoal={this.props.currentJobGoal} />
+                        <UpdateGoalForm />
+                        </div>
+                    )}
                 </div> 
             </>    
          )
