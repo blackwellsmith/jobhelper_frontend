@@ -25,7 +25,7 @@ export const newcontact = credentials => {
                 if (contact.error) {
                     alert(contact.error)
                 } else {
-                    alert(contact.alert)
+                    alert("successfully added contact")
                     dispatch(addContact(contact)) 
                 }
             })
