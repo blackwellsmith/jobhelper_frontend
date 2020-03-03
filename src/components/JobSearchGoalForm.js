@@ -1,15 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Card from 'react-bootstrap/Card'
+import  JobCardNoGoal from './JobCardNoGoal.js'
 import { getCurrentUser } from '../actions/currentUser.js'
 import { createJobGoal, postJobGoal, updateJobGoal } from '../actions/jobSearchGoal.js' 
-import  JobCardWithGoal from './JobCardWithGoal.js'
+import JobCardWithGoal from './JobCardWithGoal.js'
+
+
 class Job extends React.Component {
 
     componentDidMount() {
        this.props.getCurrentUser()
     }
-
 
     handleOnChange = (event) => {
         console.log(event)
@@ -37,24 +38,11 @@ class Job extends React.Component {
         return (
             <div className="JobGoal">
                 {console.log(this.props.currentJobGoal)}
-                {(this.props.currentJobGoal !== []) ? (
+                {(this.props.currentJobGoal === []) ? (
                     <JobCardWithGoal currentJobGoal={this.props.currentJobGoal}/>
-                    
-
-           
-                
                 ) : (
-                        <div className="badgecontainer">
-                            <Card body bg="secondary" text="white" border="primary">
-                                <Card.Header>Dream job</Card.Header>
-                                <Card.Body>
-                                    <Card.Title>This is very important.</Card.Title>
-                                    <Card.Text>
-                                        Please create your Dream Job below.
-                        </Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </div>
+                    <JobCardNoGoal />   
+                        
                     )
                 }
             
