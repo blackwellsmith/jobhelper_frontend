@@ -20,7 +20,7 @@ class App extends React.Component {
 
   componentDidMount() {
     
-      this.props.getCurrentUser()
+    (this.props.currentUser ?  setCurrentUser(this.props.currentUser) : this.props.getCurrentUser() )
     
   }
 

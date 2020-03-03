@@ -1,8 +1,8 @@
 import React from "react"
 import Card from 'react-bootstrap/Card'
 
-const JobCardNoGoal = (props) => {
-    {console.log(props.currentJobGoal)}
+const JobCardNoGoal = () => {
+   
     return (
        
         <div className="badgecontainer">
@@ -12,10 +12,10 @@ const JobCardNoGoal = (props) => {
                 <Card.Title>This is very important.</Card.Title>
                 <Card.Text>
                     Please create your Dream Job below.
-    </Card.Text>
+                 </Card.Text>
             </Card.Body>
-            </Card>
-            </div>
+        </Card>
+        </div>
     )
 }
 

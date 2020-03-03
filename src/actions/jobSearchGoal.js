@@ -11,8 +11,8 @@ export const createJobGoal = (formData) => {
 export const postJobGoal = credentials => {
     return dispatch => {
         console.log(credentials)
-        debugger
-        dispatch(setCurrentJobGoal(credentials))
+        //debugger
+        //dispatch(setCurrentJobGoal(credentials))
         return fetch("http://localhost:3000/jobs", {
             credentials: "include",
             method: "POST",
@@ -26,7 +26,8 @@ export const postJobGoal = credentials => {
                 if (job.error) {
                     alert(job.error)
                 } else {
-                    dispatch(jobGoal(job))
+                    dispatch(setCurrentJobGoal(job))
+                    //dispatch(jobGoal(job))
                 }
             })
         .catch(console.log)
@@ -35,6 +36,7 @@ export const postJobGoal = credentials => {
 
 export const updateJobGoal = (credentials, jobId) => {
     console.log("updating that shit")
+    debugger
     return dispatch => {
         return fetch(`http://localhost:3000/jobs/${jobId}`, {
             credentials: "include",

@@ -31,7 +31,7 @@ export const jobGoal = () => {
                     //debugger
                     //alert(job.error)
                 } else {
-                    console.log(job)
+                    //console.log(job)
                     dispatch(setCurrentJobGoal(job)) 
                     
                 }
