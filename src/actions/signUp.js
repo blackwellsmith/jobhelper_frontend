@@ -1,4 +1,4 @@
-import { setCurrentUser } from  './currentUser.js'
+import { login } from  './currentUser.js'
 export const updateSignUp = (formData) => {
     
     return {
@@ -23,7 +23,7 @@ export const signup = credentials => {
                 if (user.error) {
                     alert(user.error)
                 } else {
-                    dispatch(setCurrentUser(credentials)) 
+                    dispatch(login(credentials)) 
                 }
             })
         .catch(console.log)
