@@ -4,6 +4,7 @@ import  JobCardNoGoal from './JobCardNoGoal.js'
 import { getCurrentUser } from '../actions/currentUser.js'
 import JobCardWithGoal from './JobCardWithGoal.js'
 import GoalForm from './GoalForm.js'
+import UpdateGoalForm from './UpdateGoalForm.js'
 import { jobGoal } from '../actions/currentJobGoal.js'
 
 
@@ -18,7 +19,7 @@ class Job extends React.Component {
             <>
             <div className="JobGoal">
                 {console.log(this.props.currentJobGoal)}
-                    {(this.props.currentJobGoal !== []) ? ( <div> <JobCardWithGoal currentJobGoal={this.props.currentJobGoal} /> </div>) : (<div> <JobCardNoGoal /><GoalForm currentJobGoal={this.props.currentJobGoal} /></div> )}
+                    {(this.props.currentJobGoal !== []) ? ( <div> <JobCardWithGoal currentJobGoal={this.props.currentJobGoal} /> <UpdateGoalForm /></div>) : (<div> <JobCardNoGoal /><GoalForm currentJobGoal={this.props.currentJobGoal} /></div> )}
                 
                 </div> 
             </>    
