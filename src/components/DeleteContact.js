@@ -8,11 +8,9 @@ const DeleteContact = ({deleteUserContact, contact}) =>  {
         }
     
         return (
-            
-                <div>
+            <div>
                 <button onClick={() => handleClick( `${contact}` ) }  className="btn btn-secondary" align="center">Remove contact</button>
-                </div>
-            
+            </div>
         )
 }  
     

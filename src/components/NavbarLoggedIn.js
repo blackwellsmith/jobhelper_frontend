@@ -29,9 +29,6 @@ const NavbarLoggedIn = (props) => {
                </Navbar.Text> 
                </Nav>
                <Nav>
-               
-               </Nav>
-               <Nav>
                <Form inline>
                <Logout />
                </Form>
@@ -39,8 +36,7 @@ const NavbarLoggedIn = (props) => {
                </Navbar.Collapse>
              </Navbar>
              </div>
-        
-    )
+     )
 } 
 
 const mapStateToProps = ( state ) => {

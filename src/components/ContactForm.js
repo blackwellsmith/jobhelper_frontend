@@ -39,7 +39,6 @@ const ContactForm = ({ contactFormData, updateContactForm, newcontact }) => {
                     <input placeholder="contact information" className="form-control input-lg" value={contactFormData.contact_info} name="contact_info" type='text' onChange={handleOnChange} required/>
                     </div>
                     
-                
                 <button id='btn' type="submit" className="btn btn-primary">Submit Contact</button>
             </div> 
             <br></br>

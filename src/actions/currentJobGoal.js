@@ -1,5 +1,4 @@
 export const setCurrentJobGoal = goal => {
-    console.log("in set goal")
     return {
         type: "SET_CURRENT_JOB_GOAL",
         goal
@@ -25,15 +24,9 @@ export const jobGoal = () => {
             .then(r => r.json())
             .then(job => {
                 if (job === null) {
-                    //console.log(job)
-                    return null
-                    
-                    //debugger
-                    //alert(job.error)
-                } else {
-                    //console.log(job)
-                    dispatch(setCurrentJobGoal(job)) 
-                    
+                     return null
+                  } else {
+                     dispatch(setCurrentJobGoal(job)) 
                 }
             })
         .catch(console.log)

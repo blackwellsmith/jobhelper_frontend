@@ -52,7 +52,6 @@ export const updateJobGoal = (credentials, jobId) => {
                     alert(job.error)
                 } else {
                     dispatch(setCurrentJobGoal(job))
-                    console.log("updating that shit")
                 }
             })
         .catch(console.log)

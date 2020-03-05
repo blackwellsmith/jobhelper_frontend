@@ -20,7 +20,7 @@ const Signup = ({ signUpData, updateSignUp, signup }) => {
         signup(signUpData)
     }
     return (
-        <div className="Signup"> 
+    <div className="Signup"> 
       <br></br>      
         <form onSubmit={handleOnSubmit}>
             <div className="form-group">

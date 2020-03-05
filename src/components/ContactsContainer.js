@@ -6,19 +6,14 @@ import Card from 'react-bootstrap/Card'
 
 
 const Contacts = ({ contactsIndex}) => {
-
-  
-    
     return (
       <div className="ContactsContainer">
         <div className="badgecontainer">
           <Card body bg="secondary" text="white" border="primary">
             {(contactsIndex === []) ? <Card.Header>Please add contacts in write</Card.Header> : <Card.Header>Contacts</Card.Header>  }
           </Card>
-          
-           </div >
-        <ButtonToolbar className="bt">
-          
+            </div >
+              <ButtonToolbar className="bt">
                 {contactsIndex.sort((a, b) => a.name.localeCompare(b.name)).map(contact => (
                   <div >
                     <Card key={contact.id} style={{ width: '18rem' }} className="index">

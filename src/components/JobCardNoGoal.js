@@ -12,7 +12,7 @@ const JobCardNoGoal = () => {
                 <Card.Title>This is very important.</Card.Title>
                 <Card.Text>
                     Please create your Dream Job below.
-                 </Card.Text>
+                </Card.Text>
             </Card.Body>
         </Card>
         </div>
