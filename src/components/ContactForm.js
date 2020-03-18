@@ -15,8 +15,11 @@ const ContactForm = ({ contactFormData, updateContactForm, newcontact }) => {
     }
 
     const handleOnSubmit = event => {
+        console.log('a')
         event.preventDefault()
         newcontact(contactFormData)
+        //debugger
+        //window.setTimeout(() => console.log('e'), 5000)
     }
     return (
         <div className="ContactForm"> 

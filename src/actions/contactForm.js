@@ -10,7 +10,7 @@ export const updateContactForm = (formData) => {
 
 
 export const newcontact = credentials => {
-    
+    console.log("b")
     return dispatch => {
         return fetch("http://localhost:3000/contacts", {
             credentials: "include",
@@ -22,6 +22,7 @@ export const newcontact = credentials => {
         })
             .then(r => r.json())
             .then(contact => {
+                console.log('c')
                 if (contact.error) {
                     alert(contact.error)
                 } else {
@@ -31,4 +32,5 @@ export const newcontact = credentials => {
             })
         .catch(console.log)
     }
+    console.log('d')
 }

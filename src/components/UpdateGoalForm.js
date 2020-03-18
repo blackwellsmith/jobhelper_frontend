@@ -16,8 +16,6 @@ const UpdateGoalForm = ({ createJobGoal ,updateJobGoal,  JobGoalFormData, curren
 
     const handleOnSubmit = (event) => {
         event.preventDefault()
-        //console.log(JobGoalFormData, currentJobGoal.id)
-        //debugger // 
         updateJobGoal(JobGoalFormData, currentJobGoal.id) 
     }
 
