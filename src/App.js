@@ -18,15 +18,28 @@ import ContactForm from "./components/ContactForm.js"
 
 class App extends React.Component {
 
+  
+
+  
   componentDidMount() {
-    
-    (this.props.currentUser ?  setCurrentUser(this.props.currentUser) : this.props.getCurrentUser() )
-    
+    (this.props.currentUser ?  this.setTheUser(this.props.currentUser) : this.getTheUser() )
+  }
+
+  getTheUser() {
+    if (!this.props.currentUser) {
+      this.props.getCurrentUser()
+     } 
+  }
+
+  setTheUser(user) {
+    if (this.props.currentUser) {
+      setCurrentUser(user) 
+    }
   }
 
   render() {
     const loggedin = this.props.currentUser
-    
+    console.log("people")
     return (
       
       

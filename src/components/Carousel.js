@@ -38,7 +38,7 @@ class CarouselComponent extends React.Component {
         return (
             <Wrapper>
                 <Slider {...settings}>
-                    <Page ><h2 style={{ color: 'white' }}> It's rough out there.... time to get <span style={{ color: 'blue' }}>Heard</span>.</h2></Page>
+                    <Page ><h2 style={{ color: 'white' }}> It's rough out there... time to get <span style={{ color: 'blue' }}>Heard</span>.</h2></Page>
                     <Page ><h2 style={{ color: 'white' }}> We believe organization, positivity and connections, will return the best possible results.         </h2></Page>
                     <Page ><h2 style={{ color: 'white' }}> A job search journal is an essential tool for our busy world. </h2></Page>
                     <Page ><h2 style={{ color: 'white' }}> Heard allows you to keep track of pertinent contacts and daily job search activities.          </h2><br></br></Page>
