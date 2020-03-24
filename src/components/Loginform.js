@@ -29,7 +29,7 @@ const Login = ({ loginFormData, updateLoginForm, login }) => {
                 </div>
                     <br></br>
                 <div className="form-small">
-                    <input placeholder="password" className="form-control input-lg" value={loginFormData.password} name="password" type='text' onChange={handleOnChange} required/>
+                    <input placeholder="password" className="form-control input-lg" value={loginFormData.password} name="password" type='password' onChange={handleOnChange} required/>
                 </div>
                 <button id='btn' type="submit" className="btn btn-primary">Log in</button>
             </div>   

@@ -29,7 +29,7 @@ const JournalForm = ({ journalFormData, updateJournalForm, journalentry }) => {
                     </div>
                     
                 <div className="form">
-                    <input placeholder="Who did you meet or have coffee with?" className="form-control input-lg" value={journalFormData.meetups} name="meetups" type='text' onChange={handleOnChange} required/>
+                    <input placeholder="Who did you connect with today?" className="form-control input-lg" value={journalFormData.meetups} name="meetups" type='text' onChange={handleOnChange} required/>
                     </div>
                     
                 <div className="form">

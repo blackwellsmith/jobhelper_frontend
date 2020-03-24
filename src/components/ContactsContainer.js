@@ -70,7 +70,7 @@ class Contacts extends React.Component {
       <div className="ContactsContainer">
         <div className="badgecontainer">
           <Card body bg="secondary" text="white" border="primary">
-            {(this.props.contactsIndex === []) ? <Card.Header>You haven't added any contacts yet. Please add contacts in write.</Card.Header> : <Card.Header>Contacts</Card.Header>}
+            {(this.props.contactsIndex == []) ? <Card.Header>You haven't added any contacts yet. Please add contacts in write.</Card.Header> : <Card.Header>Contacts</Card.Header>}
             <Card.Text></Card.Text>
             <Card.Text>
               <DropdownButton  variant="secondary" id="dropdown-item-button" title={this.state.sorted}>

@@ -36,7 +36,7 @@ const GoalForm = ({ createJobGoal ,postJobGoal,  JobGoalFormData}, props) => {
                     <input placeholder="What is your desired compensation? Recognize your strengths don't sell yourself short..."
                         className="form-control input-lg" value={JobGoalFormData.pay} name="pay" type='text' onChange={handleOnChange} required />
                         </div>
-                            <button type="submit" className="btn btn-primary">Create</button>
+                <button id="btn" type="submit" className="btn btn-primary">Create</button>
                     </div>
         </form>
             
