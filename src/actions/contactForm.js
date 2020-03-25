@@ -12,7 +12,7 @@ export const updateContactForm = (formData) => {
 export const newcontact = credentials => {
     console.log("b")
     return dispatch => {
-        return fetch("/contacts", {
+        return fetch("https://hurd.herokuapp.com/contacts", {
             //credentials: "include",
             method: "POST",
             headers: {

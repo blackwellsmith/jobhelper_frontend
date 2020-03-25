@@ -11,7 +11,7 @@ export const updateJournalForm = (formData) => {
 
 export const journalentry = credentials => {
     return dispatch => {
-        return fetch("/journalentry", {
+        return fetch("https://hurd.herokuapp.com/journalentry", {
             //credentials: "include",
             method: "POST",
             headers: {

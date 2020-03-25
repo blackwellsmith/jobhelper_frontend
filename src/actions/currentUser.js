@@ -51,7 +51,7 @@ export const logout = () => {
 export const getCurrentUser = () => {
     return dispatch => {
                    dispatch(jobGoal())
-        return fetch("/get_current_user", {
+        return fetch("https://hurd.herokuapp.com/get_current_user", {
             //credentials: "include",
             method: "GET",
             headers: {

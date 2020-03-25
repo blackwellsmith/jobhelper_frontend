@@ -23,7 +23,7 @@ export const deleteContact = contact => {
 export function deleteUserContact(id) {
     
     return dispatch => { dispatch(deleteContact(id))
-        return fetch(`/contacts/${id}`, {
+        return fetch(`https://hurd.herokuapp.com/contacts/${id}`, {
             method: "DELETE",
         })
       }
@@ -34,7 +34,7 @@ export function deleteUserContact(id) {
 export const contactsindex = () => {
     
     return dispatch => {
-        return fetch("/contacts", {
+        return fetch("https://hurd.herokuapp.com/contacts", {
             //credentials: "include",
             method: "GET",
             headers: {

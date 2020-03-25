@@ -10,7 +10,7 @@ export const updateSignUp = (formData) => {
 
 export const signup = credentials => {
     return dispatch => {
-        return fetch("/signup", {
+        return fetch("https://hurd.herokuapp.com/signup", {
             //credentials: "include",
             method: "POST",
             headers: {
