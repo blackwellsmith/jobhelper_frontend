@@ -12,7 +12,7 @@ export const setCurrentUser = user => {
 } 
  
 export const login = credentials => {
-    console.log("wtf", credentials)
+    console.log("wtf in login", credentials)
     return dispatch => {
         return fetch("https://hurd.herokuapp.com/login", {
             //credentials: "include",
@@ -25,8 +25,9 @@ export const login = credentials => {
             .then(r => r.json())
             .then(user => {
                 if (user.error) {
-                    alert(user.error)
+                    console.log("after fetch error", user.error)
                 } else {
+                    console.log("after fetch successful", user)
                     dispatch(setCurrentUser(user)) 
                     dispatch(journalindex(user))
                     dispatch(jobGoal(user))
