@@ -13,8 +13,8 @@ export const postJobGoal = credentials => {
         console.log(credentials)
         //debugger
         //dispatch(setCurrentJobGoal(credentials))
-        return fetch("http://localhost:3000/jobs", {
-            credentials: "include",
+        return fetch("/jobs", {
+            //credentials: "include",
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -24,8 +24,11 @@ export const postJobGoal = credentials => {
             .then(r => r.json())
             .then(job => {
                 if (job.error) {
+                    //debugger
                     alert(job.error)
                 } else {
+                    console.log(job)
+                    debugger
                     dispatch(setCurrentJobGoal(job))
                     //dispatch(jobGoal(job))
                 }
@@ -38,8 +41,8 @@ export const updateJobGoal = (credentials, jobId) => {
     console.log("updating that shit")
     //debugger
     return dispatch => {
-        return fetch(`http://localhost:3000/jobs/${jobId}`, {
-            credentials: "include",
+        return fetch(`/jobs/${jobId}`, {
+            //credentials: "include",
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

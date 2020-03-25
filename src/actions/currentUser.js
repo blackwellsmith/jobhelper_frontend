@@ -14,8 +14,8 @@ export const setCurrentUser = user => {
 export const login = credentials => {
     console.log("wtf", credentials)
     return dispatch => {
-        return fetch("http://localhost:3000/login", {
-            credentials: "include",
+        return fetch("/login", {
+            //credentials: "include",
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -41,7 +41,7 @@ export const logout = () => {
     return (dispatch) => {
         dispatch(clearCurrentJobGoal())
         dispatch(clearCurrentUser())
-        return fetch('http://localhost:3000/logout', {
+        return fetch('/logout', {
             credentials: 'include',
             method:"DELETE"
         })
@@ -51,8 +51,8 @@ export const logout = () => {
 export const getCurrentUser = () => {
     return dispatch => {
                    dispatch(jobGoal())
-        return fetch("http://localhost:3000/get_current_user", {
-            credentials: "include",
+        return fetch("/get_current_user", {
+            //credentials: "include",
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

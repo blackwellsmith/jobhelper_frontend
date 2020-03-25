@@ -10,12 +10,12 @@ export const updateSignUp = (formData) => {
 
 export const signup = credentials => {
     return dispatch => {
-        return fetch("http://localhost:3000/signup", {
-            credentials: "include",
+        return fetch("/signup", {
+            //credentials: "include",
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
-            },
+             },
             body: JSON.stringify(credentials)
         })
             .then(r => r.json())

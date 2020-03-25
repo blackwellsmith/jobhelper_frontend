@@ -23,7 +23,7 @@ export const deleteContact = contact => {
 export function deleteUserContact(id) {
     
     return dispatch => { dispatch(deleteContact(id))
-        return fetch(`http://localhost:3000/contacts/${id}`, {
+        return fetch(`/contacts/${id}`, {
             method: "DELETE",
         })
       }
@@ -34,8 +34,8 @@ export function deleteUserContact(id) {
 export const contactsindex = () => {
     
     return dispatch => {
-        return fetch("http://localhost:3000/contacts", {
-            credentials: "include",
+        return fetch("/contacts", {
+            //credentials: "include",
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

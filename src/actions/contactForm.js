@@ -12,8 +12,8 @@ export const updateContactForm = (formData) => {
 export const newcontact = credentials => {
     console.log("b")
     return dispatch => {
-        return fetch("http://localhost:3000/contacts", {
-            credentials: "include",
+        return fetch("/contacts", {
+            //credentials: "include",
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

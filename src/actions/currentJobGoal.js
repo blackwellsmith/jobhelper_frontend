@@ -1,4 +1,5 @@
 export const setCurrentJobGoal = goal => {
+    console.log(goal)
     return {
         type: "SET_CURRENT_JOB_GOAL",
         goal
@@ -13,8 +14,8 @@ export const clearCurrentJobGoal = () => {
 
 export const jobGoal = () => {
     return dispatch => {
-        return fetch("http://localhost:3000/jobs", {
-            credentials: "include",
+        return fetch("/jobs", {
+            //credentials: "include",
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

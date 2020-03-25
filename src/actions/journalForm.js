@@ -11,8 +11,8 @@ export const updateJournalForm = (formData) => {
 
 export const journalentry = credentials => {
     return dispatch => {
-        return fetch("http://localhost:3000/journalentry", {
-            credentials: "include",
+        return fetch("/journalentry", {
+            //credentials: "include",
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
