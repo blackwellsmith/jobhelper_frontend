@@ -14,7 +14,7 @@ export const setCurrentUser = user => {
 export const login = credentials => {
     console.log("wtf", credentials)
     return dispatch => {
-        return fetch("/login", {
+        return fetch("https://hurd.herokuapp.com/login", {
             //credentials: "include",
             method: "POST",
             headers: {
