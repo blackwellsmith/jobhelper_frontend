@@ -62,6 +62,7 @@ export const getCurrentUser = () => {
             .then(r => r.json())
             .then(user => {
                 if (user.error) {
+                    console.log(user.error)
                     alert(user.error)
                 } else {
                     dispatch(jobGoal())

@@ -26,7 +26,9 @@ export const jobGoal = () => {
             .then(job => {
                 if (job === null) {
                      return null
-                  } else {
+                } else {
+                    console.log(job)
+                    debugger
                      dispatch(setCurrentJobGoal(job)) 
                 }
             })
