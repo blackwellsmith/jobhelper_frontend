@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 
 const Wrapper = styled.div`
-width: 50%;
+width: 70%;
 height: 30%;
 margin-left: 25%;
 background: #0080ff;
@@ -17,7 +17,7 @@ const Page = styled.div`
 
 width: 100%;
 height: 180px;
-padding: 10px;
+padding: 30px;
 padding-bottom: 30px;
 display: flex;
 align-items: center;
