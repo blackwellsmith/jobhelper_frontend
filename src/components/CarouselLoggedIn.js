@@ -12,9 +12,7 @@ height: 35%;
 margin-left: 15%;
 background: #0080ff;
 border: 2.5px solid white;
-display: flex;
-align-items: center;
-justify-content: center;
+
 
 `
 
@@ -24,6 +22,9 @@ width: 100%;
 height: 180px;
 padding: 30px;
 padding-bottom: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
 
 `
 
