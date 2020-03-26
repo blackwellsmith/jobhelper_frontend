@@ -37,6 +37,7 @@ const GoalForm = ({ createJobGoal ,postJobGoal,  JobGoalFormData}, props) => {
                         className="form-control input-lg" value={JobGoalFormData.pay} name="pay" type='text' onChange={handleOnChange} required />
                     </div>
                 <button id="btn" type="submit" className="btn btn-primary">Create</button>
+                <br></br>
           </div>
           <br></br>
         </form>
