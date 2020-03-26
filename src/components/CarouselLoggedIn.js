@@ -12,6 +12,9 @@ height: 30%;
 margin-left: 15%;
 background: #0080ff;
 border: 2.5px solid white;
+display: flex;
+align-items: center;
+justify-content: center;
 
 `
 
@@ -40,7 +43,7 @@ class CarouselComponentLoggedIn extends React.Component {
         return (
             <Wrapper>
                 <Slider {...settings}>
-                    <Page><h2 style={{ color: 'white' }}> Here are some suggestions for your successful job search. </h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> Here are some tips and how to use <span style={{ color: 'blue' }}>Heard</span> for your successful job search. </h2></Page>
                     <Page><h2 style={{ color: 'white' }}> Keep a positive attitude, meditation and exercise help relieve negative emotions.</h2></Page>
                     <Page><h2 style={{ color: 'white' }}> Use Heard everyday, keep track of your progress, thoughts and contacts. </h2></Page>
                     <Page><h2 style={{ color: 'white' }}> It's not what you know it's who you know, fill out your contacts list and use it.</h2></Page>
