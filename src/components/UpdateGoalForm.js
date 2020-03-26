@@ -39,6 +39,7 @@ const UpdateGoalForm = ({ createJobGoal ,updateJobGoal,  JobGoalFormData, curren
             </div>
                 <button id="btn" type="submit" className="btn btn-primary">Update</button>
             </div>
+            <br></br>
         </form>
             
     )
