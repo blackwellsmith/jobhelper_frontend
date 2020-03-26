@@ -8,7 +8,7 @@ export const setUserJournal = index => {
 export const journalindex = () => {
     return dispatch => {
         return fetch("https://hurd.herokuapp.com/journalindex", { 
-            //credentials: "include",
+            credentials: "include",
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

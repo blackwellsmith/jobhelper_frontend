@@ -35,7 +35,7 @@ export const contactsindex = () => {
     
     return dispatch => {
         return fetch("https://hurd.herokuapp.com/contacts", {
-            //credentials: "include",
+            credentials: "include",
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

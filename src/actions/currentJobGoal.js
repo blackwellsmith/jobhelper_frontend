@@ -15,7 +15,7 @@ export const clearCurrentJobGoal = () => {
 export const jobGoal = () => {
     return dispatch => {
         return fetch("https://hurd.herokuapp.com/jobs", {
-            //credentials: "include",
+            credentials: "include",
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
