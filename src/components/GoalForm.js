@@ -23,17 +23,17 @@ const GoalForm = ({ createJobGoal ,postJobGoal,  JobGoalFormData}, props) => {
         <form onSubmit={handleOnSubmit}>
                     <div className="form-group">
                         <div className="form-small">
-                    <input placeholder="Job goal description" className="form-control input-lg"
+                    <input placeholder="Dream Job:" className="form-control input-lg"
                         value={JobGoalFormData.name} name="name" type='text' onChange={handleOnChange} required />
                         </div>
                     
                         <div className="form-small">
-                    <input placeholder="Location of job: Dallas, Chattanooga, Remote, abroad...." className="form-control input-lg"
+                    <input placeholder="Location:" className="form-control input-lg"
                         value={JobGoalFormData.location} name="location" type='text' onChange={handleOnChange} required />
                         </div>
                     
                         <div className="form-small">
-                    <input placeholder="What is your desired compensation? Recognize your strengths don't sell yourself short..."
+                    <input placeholder="Desired Compensation:"
                         className="form-control input-lg" value={JobGoalFormData.pay} name="pay" type='text' onChange={handleOnChange} required />
                         </div>
                 <button id="btn" type="submit" className="btn btn-primary">Create</button>

@@ -7,9 +7,9 @@ import { connect } from 'react-redux'
 
 
 const Wrapper = styled.div`
-width: 50%;
+width: 75%;
 height: 30%;
-margin-left: 25%;
+margin-left: 5px;
 background: #0080ff;
 border: 2.5px solid white;
 
@@ -41,12 +41,12 @@ class CarouselComponentLoggedIn extends React.Component {
             <Wrapper>
                 <Slider {...settings}>
                     <Page><h2 style={{ color: 'white' }}> Here are some suggestions for your successful job search. </h2></Page>
-                    <Page><h2 style={{ color: 'white' }}> Keep a positive attitude. </h2></Page>
-                    <Page><h2 style={{ color: 'white' }}> Use Heard everyday, keep track of your activities and contacts. </h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> Keep a positive attitude, meditation and exercise help relieve negative emotions.</h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> Use Heard everyday, keep track of your progress, thoughts and contacts. </h2></Page>
                     <Page><h2 style={{ color: 'white' }}> It's not what you know it's who you know, fill out your contacts list and use it.</h2></Page>
                     <Page><h2 style={{ color: 'white' }}> Make someone coffee, make connections remotely, engage socially. Get seen be <span style={{ color: 'blue' }}>Heard</span>.</h2></Page>
                     <Page><h2 style={{ color: 'white' }}> Keep track of what positions you have applied to, use that information for following up.</h2><br></br></Page>                   
-                    <Page><h2 style={{ color: 'white' }}> Improve your professional skills, continued learning will make you a better candidate.</h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> Improve your professional skills, continued learning will increase your value.</h2></Page>
                     <Page><h2 style={{ color: 'white' }}> We believe organization, positivity and connections, will return the best possible results.</h2></Page>
                 </Slider>
               

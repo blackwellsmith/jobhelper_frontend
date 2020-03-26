@@ -25,23 +25,23 @@ const JournalForm = ({ journalFormData, updateJournalForm, journalentry }) => {
         <form onSubmit={handleOnSubmit}>
             <div className="form-group">
                 <div className="form">
-                    <input placeholder="How was today?" className="form-control input-lg" value={journalFormData.entry} name="entry" type='text' onChange={handleOnChange} required/>
+                    <input placeholder="How was your day?" className="form-control input-lg" value={journalFormData.entry} name="entry" type='text' onChange={handleOnChange} required/>
                     </div>
                     
                 <div className="form">
-                    <input placeholder="Who did you connect with today?" className="form-control input-lg" value={journalFormData.meetups} name="meetups" type='text' onChange={handleOnChange} required/>
+                    <input placeholder="Connections made today?" className="form-control input-lg" value={journalFormData.meetups} name="meetups" type='text' onChange={handleOnChange} required/>
                     </div>
                     
                 <div className="form">
-                    <input placeholder="How did you improve your professional skills?" className="form-control input-lg" value={journalFormData.study} name="study" type='text' onChange={handleOnChange} required/>
+                    <input placeholder="Skills you improved?" className="form-control input-lg" value={journalFormData.study} name="study" type='text' onChange={handleOnChange} required/>
                     </div>
                     
                 <div className="form">
-                    <input placeholder="What jobs did you apply For?" className="form-control input-lg" value={journalFormData.applications} name="applications" type='text' onChange={handleOnChange} required/>
+                    <input placeholder="What jobs did you apply for?" className="form-control input-lg" value={journalFormData.applications} name="applications" type='text' onChange={handleOnChange} required/>
                     </div>
                     
                 <div className="form">
-                    <input placeholder="What are your goals for tomorrow?" className="form-control input-lg" value={journalFormData.goals} name="goals" type='text' onChange={handleOnChange} required/>
+                    <input placeholder="Tomorrows goal?" className="form-control input-lg" value={journalFormData.goals} name="goals" type='text' onChange={handleOnChange} required/>
                     </div>
                     
                 <button id="btn" type="submit" className="btn btn-primary">Make Entry</button>
