@@ -53,7 +53,7 @@ class CarouselComponentLoggedIn extends React.Component {
                     <Page><h2 style={{ color: 'white' }}> Be selective on who you add, only create contacts that get you closer to your Dream Job.</h2></Page>
                     <Page><h2 style={{ color: 'white' }}> Make some coffee, make connections remotely, engage socially. Get seen be <span style={{ color: 'blue' }}>Heard</span>.</h2></Page>
                     <Page><h2 style={{ color: 'white' }}> What is your Dream Job? Hmm... </h2><br></br></Page>                   
-                    <Page><h2 style={{ color: 'white' }}> Think about it, this guides your goals, who you network with and becomes your compass when it gets rough.</h2></Page>
+                    <Page><h2 style={{ color: 'white' }}> This guides your goals, who you network with and becomes your compass when it gets rough.</h2></Page>
                     <Page><h2 style={{ color: 'white' }}> We believe organization, positivity and connections, return the best possible results.</h2></Page>
                 </Slider>
               
