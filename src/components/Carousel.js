@@ -17,7 +17,7 @@ const Page = styled.div`
 
 width: 100%;
 height: 180px;
-padding: 30px;
+padding: 10px;
 padding-bottom: 30px;
 display: flex;
 align-items: center;
