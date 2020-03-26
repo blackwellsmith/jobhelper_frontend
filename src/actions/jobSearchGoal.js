@@ -14,7 +14,7 @@ export const postJobGoal = credentials => {
         //debugger
         //dispatch(setCurrentJobGoal(credentials))
         return fetch("https://hurd.herokuapp.com/jobs", {
-            //credentials: "include",
+            credentials: "include",
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -42,7 +42,7 @@ export const updateJobGoal = (credentials, jobId) => {
     //debugger
     return dispatch => {
         return fetch(`https://hurd.herokuapp.com/jobs/${jobId}`, {
-            //credentials: "include",
+            credentials: "include",
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

@@ -53,7 +53,7 @@ export const getCurrentUser = () => {
     return dispatch => {
                    dispatch(jobGoal())
         return fetch("https://hurd.herokuapp.com/get_current_user", {
-            //credentials: "include",
+            credentials: "include",
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

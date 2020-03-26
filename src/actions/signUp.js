@@ -11,7 +11,7 @@ export const updateSignUp = (formData) => {
 export const signup = credentials => {
     return dispatch => {
         return fetch("https://hurd.herokuapp.com/signup", {
-            //credentials: "include",
+            credentials: "include",
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

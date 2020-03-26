@@ -13,7 +13,7 @@ export const newcontact = credentials => {
     //console.log("b")
     return dispatch => {
         return fetch("https://hurd.herokuapp.com/contacts", {
-            //credentials: "include",
+            credentials: "include",
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
